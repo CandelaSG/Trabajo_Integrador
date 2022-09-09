@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="detail-movie" href="detail-movie.html">
+    <link rel="favoritos" href="./favourite.html">
     <title>Home</title>
 </head>
 <body>
     <header>
-
+        <nav>
+            <ul class="menu"><a href="#"> Home </a></ul>
+            <ul class="menu"><a href="./favourite.html">Favoritos </a></ul>
+        </nav>
+        <form action="./search-results.html" method="GET"></form>
+        <input id="buscador" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..."> <!-- REVISAR EL "TYPE". ¿PUEDE SER "SEARCH"? -->
+        <input type="submit" value="Buscar">
     </header>
     <section class="Películas populares">
         <article class="titanic"><a href="./detail-movie.html"><img src="./img/ppopulares/titanic.jpg">Titanic - 1998</a></article>
