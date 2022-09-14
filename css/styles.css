@@ -11,6 +11,7 @@ body{
     background-image: url(./imgCss/background.png);
     background-repeat: repeat;
     background-size: contain;
+    margin: 0px;
 }
 
 header{
@@ -25,6 +26,33 @@ header{
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 50px;
+}
+  
+.buscar input{
+    
+    width: 150px;
+    height: 25px;
+    padding: 0 20px;
+    font-size: 13px;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6 ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.boton_buscar input{
+    right: 50px;
+    width: 50px;
+    height: 25px;
+    padding: 0 20px;
+    font-size: 13px;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6 ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .menu{
     display: inline;
@@ -75,6 +103,7 @@ h1{
 .poster{
     height: 300px;
 }
+
 .nombre{
     display: block;
     text-align: center;
