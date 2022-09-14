@@ -8,23 +8,44 @@ a{
 }
 body{
     background-color: #22014d;
-    background-image: url(./imgCss/bacground2.png);
+    background-image: url(./imgCss/background.png);
+    background-repeat: repeat;
     background-size: contain;
 }
 
 header{
     list-style-type: none;
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    background-color:#16032fa2;
-}
-.menu{
-    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
+    background-color:#16032fa2;
+    padding: 10px;
+    justify-content: space-between;
     align-items: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 50px;
+}
+.menu{
+    display: inline;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.logo{
+    height: 65px;
+}
+.estrenoCont{
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+.estreno{
+    height: 600px;
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    margin-top: 70px;
+    margin-bottom: 55px;
 }
 h2{
     margin-left: 50px;
@@ -40,15 +61,16 @@ h1{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     margin-left: 50px;
     height: 350px;
     width: 1080px;
     justify-content: space-between;
 }
 .pelicula{
-    padding-left:10px;
-    padding-right: 10px;
+    padding-left:40px;
+    padding-right: 20px;
+    justify-content: space-around;
 }
 .poster{
     height: 300px;
@@ -62,4 +84,24 @@ h1{
     text-align: center;
     color:rgb(144, 132, 132);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer{
+    background-color:#16032fa2;
+}
+.navFooter{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+.fraseFooter{
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+}
+.nombresFooter{
+    color: rgba(95, 87, 87, 0.512);
+    font-size: 10px;
+    text-align: right;
 }

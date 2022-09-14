@@ -12,14 +12,21 @@
 </head>
 <body>
     <header>
+        <a href="./home.html"><img class="logo" src="./img/headerFooter/logo.png" alt="Logo Infinity"></a>
         <nav class="lista menu">
-            <ul class="menu"><a href="#"> Home </a></ul>
-            <ul class="menu"><a href="./favourite.html">Favoritos </a></ul>
+            <ul >
+                |<li class="menu"> <a href="./home.html">HOME</a></li> |
+                <li class="menu"> <a href="./favourite.html">FAVORITOS</a></li> |
+                <li class="menu"> <a href="./genres.html">GENEROS</a></li> |
+            </ul>
         </nav>
         <form action="./search-results.html" method="GET">
         <input id="buscador" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ...">
         <input type="submit" value="Buscar"></form>
     </header>
+    <section class="estrenoCont">
+        <img class="estreno" src="./img/estreno/estreno.png" alt="Poster 'Don´t worry darling'">
+    </section>
     <h2>PELÍCULAS POPULARES</h2>
     <section class="container">
         <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/ppopulares/titanic.jpg" alt="Poster de 'Titanic'" ></a>
@@ -34,7 +41,7 @@
         <a class="nombre" href="./detail-movie.html">El club de la pelea</a>
         <a class="año" href="./detail-movie.html">(1999)</a>
         </article>
-        <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/ppopulares/la isla siniestra.jpg" alt="Poster de 'La isla siniestra'" ></a>
+        <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/ppopulares/laIslaSiniestra.jpeg" alt="Poster de 'La isla siniestra'" ></a>
         <a class="nombre" href="./detail-movie.html">La isla sinisestra</a>
         <a class="año" href="./detail-movie.html">(2010)</a>
         </article>
@@ -91,7 +98,12 @@
         <a class="año" href="./detail-movie.html">(2017)</a>
         </article>
     </section>
+   
     <footer>
+    <nav class="navFooter">
+        <a href="./home.html"><img class="fraseFooter" src="./img/headerFooter/footer.png" alt="To infinity and beyond"></a>
+        <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
+    </nav>
         
     </footer>
 </body>
