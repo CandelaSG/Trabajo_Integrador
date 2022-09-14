@@ -1,15 +1,23 @@
 *{
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 body{
     background-color: #22014d;
+    background-image: url(./imgCss/bacground2.png);
+    background-size: contain;
 }
+
 header{
     list-style-type: none;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    background-color: black;
+    background-color:#16032fa2;
 }
 .menu{
     display: flex;
@@ -20,6 +28,13 @@ header{
 }
 h2{
     margin-left: 50px;
+    color: aliceblue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+    margin-left: 50px;
+    color: aliceblue;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .container{
     display: flex;
@@ -40,4 +55,11 @@ h2{
 }
 .nombre{
     display: block;
+    text-align: center;
+}
+.año{
+    display: block;
+    text-align: center;
+    color:rgb(144, 132, 132);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
