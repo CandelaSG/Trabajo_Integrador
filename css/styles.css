@@ -18,16 +18,25 @@ header{
     justify-content: space-around;
     align-items: center;
 }
+h2{
+    margin-left: 50px;
+}
 .container{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    height: 200px;
-    width: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    height: 350px;
+    width: 1080px;
+    justify-content: space-between;
+}
+.pelicula{
+    padding-left:10px;
+    padding-right: 10px;
 }
 .poster{
-    height: 280px;
+    height: 300px;
 }
 .nombre{
     display: block;
