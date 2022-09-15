@@ -8,35 +8,51 @@
     <link rel="stylesheet" href="./css/materialize.css">
     <title>Detail Series</title>
 </head>
-<body class="detail">
-    <section class="titulo">
-        <img src="./img/spopulares/friends.jpg"></a>
-        <h1>Friends</h1>
-    </section>
-    <section class="data">
-        <ul>
-            <li>Calificación
-                <input type="radio" name="rate" id="rate-5">
-                    <label for="rate-5" class "fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-4">
-                    <label for="rate-4" class "fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-3">
-                    <label for="rate-3" class "fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-2">
-                    <label for="rate-2" class "fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-1">
-                    <label for="rate-1" class "fas fa-star"></label>
-            </li>
-            <li>Fecha de estreno: 1994</li>
-            <li>Género</li>
-            <br>
-            <form action="./favourite.html" method="GET">
-                <button type="submit">Agregar a favoritos</button>
-    </section>
-    <section class="sinopsis">
-        <p>Una de las series más exitosas de la televisión, ""Friends"" es una sofisticada e ingeniosa comedia que ve dentro de los corazones y las mentes de un grupo de amigos que viven en Nueva York</p>
-    </section>
+<body>
+    <header>
+        <a href="./home.html"><img class="logo" src="./img/headerFooter/logo.png" alt="Logo Infinity"></a>
+        <nav class="lista menu">
+            <ul >
+                <li class="menu"> <a href="./home.html">HOME</a></li> |
+                <li class="menu"> <a href="./favourite.html">FAVORITOS</a></li> |
+                <li class="menu"> <a href="./genres.html">GENEROS</a></li> |
+            </ul>
+        </nav>
+        <form action="./search-results.html" method="GET">
+
+            <div class="buscar">
+            <input id="buscador" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ...">
+            </div>
+            <div class="boton_buscar">
+            <input type="submit" value="Buscar"></form>
+            </div>
+    </header>
     
 
+    <section class="data">
+  <!--   <article class="fotoDetail"><img src="./img/spopulares/friendsDetail.jpg" alt="Poster Friends">
+        </article> -->
+    <article class="trailer"><iframe width="560" height="315" src="https://www.youtube.com/embed/IEEbUzffzrk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </article>
+    <article class="detailData">
+            <ul class="listaData">
+                <li>Título: Friends</li>
+                <li>Fecha de estreno: 1994</li>
+                <li>Género: <a href="./detail-genres.html">Sitcom</a></li>
+                <li>Elenco: Jennifer Anniston, Lisa Kudrow, David Schwimmer, Courtney Cox, Matthew Perry y Matt LeBlanc</li>
+            </ul>
+        
+        <h2>Sinopsis</h2>
+        <p>Una de las series más exitosas de la televisión, ""Friends"" es una sofisticada e ingeniosa comedia que ve dentro de los corazones y las mentes de un grupo de amigos que viven en Nueva York </p>
+        <form action="./favourite.html" method="GET">
+        <button type="submit">Agregar a favoritos</button></li> 
+    </article>  
+    </section>
+    <section class="castFotos">
+        
+    </section>
+
+
+   
 </body>
 </html>
