@@ -12,8 +12,9 @@ body{
     background-repeat: repeat;
     background-size: contain;
     margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+/* HEADER */
 header{
     list-style-type: none;
     display: flex;
@@ -68,6 +69,7 @@ header{
 .logo{
     height: 65px;
 }
+/* ESTRENO */
 .estrenoCont{
     flex-wrap: wrap;
     flex-direction: row;
@@ -81,6 +83,7 @@ header{
     margin-top: 75px;
     margin-bottom: 55px;
 }
+/* PELICULAS Y SERIES */
 h2{
     margin-left: 50px;
     color: aliceblue;
@@ -120,6 +123,65 @@ h1{
     color:rgb(144, 132, 132);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+/* DETAIL SERIES Y PELICULAS */
+/* INFO */
+.tituloDetail{
+    text-align: center;
+}
+.data {
+    /*   background-color: rgba(0, 0, 0, 0.363); */
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: center; 
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+  .trailer {
+      justify-content: flex-start;
+  }
+  .detailData {
+      padding-left: 100px;
+      color: white;
+      width: 560px;
+  }
+  
+  .listaData {
+      list-style-type: none;
+  }
+  .sinopsis{
+    margin-bottom: 30px;
+  }
+  .favoritos{
+    background-color: black;
+    padding: 13px;
+    border-radius: 15px;
+    justify-content: flex-end;
+  }
+  /* ELENCO */
+  .castFotos{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+  }
+.elenco{
+    width: 180px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.252);
+    margin:5px;
+    padding: 10px;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.personaje{
+    color: #4d3c62;
+}
+/* FOOTER */
 footer{
     background-color:#16032fa2;
 }
@@ -143,25 +205,3 @@ footer{
     text-align: right;
 }
 
-/* Detail Series y Películas */
-.data {
-  /*   background-color: rgba(0, 0, 0, 0.363); */
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center; 
-    justify-content: center;
-    margin-top: 70px;
-}
-.trailer {
-    justify-content: flex-start;
-}
-.detailData {
-    padding-left: 100px;
-    color: white;
-    width: 560px;
-}
-
-.listaData {
-    list-style-type: none;
-}

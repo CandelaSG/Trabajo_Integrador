@@ -8,57 +8,81 @@
     <title>Detail-movie</title>
 </head>
 <body>
+    <header>
+        <a href="./home.html"><img class="logo" src="./img/headerFooter/logo.png" alt="Logo Infinity"></a>
+        <nav class="lista menu">
+            <ul >
+                <li class="menu"> <a href="./home.html">HOME</a></li> |
+                <li class="menu"> <a href="./favourite.html">FAVORITOS</a></li> |
+                <li class="menu"> <a href="./genres.html">GENEROS</a></li> |
+            </ul>
+        </nav>
+        <form action="./search-results.html" method="GET">
+
+            <div class="buscar">
+            <input id="buscador" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ...">
+            </div>
+            <div class="boton_buscar">
+            <input type="submit" value="Buscar"></form>
+            </div>
+    </header>
+    <h1 class="tituloDetail">DIVERGENTE</h1>
 
 <section class="data">
-    <h1>Divergente</h1>
     <article class="trailer"><iframe width="560" height="315" src="https://www.youtube.com/embed/IioBZ0rJdyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </article>
-    <article class="detail data">
+    </article>
+    <article class="detailData">
         <ul class="listaData">
-            <li>Fecha de estreno: 2014</li>
-            <li>Género: <a href="./detail-genres.html">Acción</a></li>
-            <li>Elenco: Shailine Woodley, Theo James, Miles Teller, Kate Winslet, Ansel Elgort y Zoë Kravitz</li>
+            <li><strong>Fecha de estreno:</strong>  2014</li>
+            <li><strong>Género: </strong> <a href="./detail-genres.html">Acción</a></li>
+            <li><strong>Elenco:</strong>  Shailine Woodley, Theo James, Miles Teller, Kate Winslet, Ansel Elgort y Zoë Kravitz</li>
             </ul>
-    <h2>Sinopsis</h2>
-        <p>En un mundo dividido y devastado por la guerra, Tris descubre sus habilidades y se une a Cuatro para resistir una conspiración siniestra contra otros como ellos </p>
-        <form action="./favourite.html" method="GET">
-        <button type="submit">Agregar a favoritos</button></li> 
+
+    <h3>Sinopsis</h3>
+        <p class="sinopsis">En un mundo dividido y devastado por la guerra, Tris descubre sus habilidades y se une a Cuatro para resistir una conspiración siniestra contra otros como ellos </p>
+        
+        <a class="favoritos" href="./favourite.html"> 🤍 Agregar a favoritos</a>
     </article>
 </section>
 
 <section class="castFotos">
     <article class="elenco">
         <img src="./img/elencos/beatrice.png" alt="Tris">
-        <p>Shailene Woodley</p>
-        <p>Beatrice Prior</p>
+        <p class="actor">Shailene Woodley</p>
+        <p class="personaje">Beatrice Prior</p>
     </article>
     <article class="elenco">
         <img src="./img/elencos/four.png" alt="Cuatro">
-        <p>Theo James</p>
-        <p>Cuatro</p>
+        <p class="actor">Theo James</p>
+        <p class="personaje">Cuatro</p>
     </article>
     <article class="elenco">
         <img src="./img/elencos/peter.png" alt="Peter">
-        <p>David Schwimmer</p>
-        <p>Peter</p>
+        <p class="actor">David Schwimmer</p>
+        <p class="personaje">Peter</p>
     </article>
     <article class="elenco">
         <img src="./img/elencos/jeanine.png" alt="Jeanine">
-        <p>Kate Winslet</p>
-        <p>Jeanine Matthews</p>
+        <p class="actor">Kate Winslet</p>
+        <p class="personaje">Jeanine Matthews</p>
     </article>
     <article class="elenco">
         <img src="./img/elencos/christina.png" alt="Christina">
-        <p>Zoë Kravitz</p>
-        <p>Christina</p>
+        <p class="actor">Zoë Kravitz</p>
+        <p class="personaje">Christina</p>
     </article>
     <article class="elenco">
         <img src="./img/elencos/caleb.png" alt="Caleb">
-        <p>Ansel Elgort</p>
-        <p>Caleb Prior</p>
+        <p class="actor">Ansel Elgort</p>
+        <p class="personaje">Caleb Prior</p>
     </article>
 </section>
-
+<footer>
+    <div class="divFooter">
+        <a class="fraseFooter" href="./home.html"><img class="imgFooter" src="./img/headerFooter/footer.png" alt="To infinity and beyond"></a>
+        <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
+    </div>   
+    </footer>
 
 </body>
 </html>
