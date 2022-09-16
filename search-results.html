@@ -19,65 +19,72 @@
         </article>
 
         <article>
-        <nav class="lista menu">
-            <ul >
-                <li class="menu"> <a href="./home.html">HOME</a></li> |
-                <li class="menu"> <a href="./favourite.html">FAVORITOS</a></li> |
-                <li class="menu"> <a href="./genres.html">GENEROS</a></li> |
-            </ul>
-        </nav>
+            <nav class="lista menu">
+                <ul >
+                    <li class="menu"> <a href="./home.html">HOME</a></li> |
+                    <li class="menu"> <a href="./favourite.html">FAVORITOS</a></li> |
+                    <li class="menu"> <a href="./genres.html">GENEROS</a></li> |
+                </ul>
+            </nav>
         </article>
 
         <article>
-        <form action="./search-results.html" method="GET" class="buscadorContainer">
-            <input class="buscar" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..." required> 
-            <a class="botonBuscar" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
-         </form> 
+            <form action="./search-results.html" method="GET" class="buscadorContainer">
+                <input class="buscar" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..." required> 
+                <a class="botonBuscar" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
+            </form> 
         </article>
-        
     </header>
 
 <!--     <p class="busquedausuario"> Tu búsqueda fue: <strong> "Titanic" </strong>  </p>
     <p class="infobusqueda"> Cerca de 10 resultados (0,45 segundos)  </p> -->
-<section class="containerResults">
-<article >
-    <a href="./detail-movie.html"><img class="imgSearch" src="./img/ppopulares/titanic.jpg" alt="Poster de 'Titanic'"></a>
-</article>
-<article class="infoPeliBusqueda">
-    <h3 class="nombreTitanic">TITANIC - 1997</h3>
-    <article class="cajitasInfo">
-        <div class="infoTitanic">
-            <h4>Género</h4>
-        </div>
-        <div class="infoTitanic">
-            <h4>Duración</h4>
-            <p>195 min</p>
-        </div>
-        <div class="infoTitanic">
-            <h4>Calificación</h4>
-            <p>8.8/10 <i class="fa-solid fa-star"></i></p>
-        </div>
+    <main>
+        <section class="containerResults">
+            <article>
+                <a href="./detail-movie.html"><img class="imgSearch" src="./img/ppopulares/titanic.jpg" alt="Poster de 'Titanic'"></a>
+            </article>
+            
+            <article class="infoPeliBusqueda">
+                <h3 class="nombreTitanic">TITANIC - 1997</h3>
+                <article class="cajitasInfo">
+                    <div class="infoTitanic">
+                        <h4>Género</h4>
+                    </div>
 
-    </article>
-<!--     <ul class="busquedainfo">
-        <li> <strong>Género: </strong><a href="./detail-genres.html">Romance</a></li>
-        <li><strong>Duracion: </strong> 195 minutos</li>
-        <li><strong>Calificación: </strong> 8.8/10 <i class="fa-solid fa-star"></i></li> 
-        <li> <strong>Elenco:</strong> Leonardo DiCaprio, Kate Winslet, Bily Zane, Kathy Bates, Bill Paxton y Gloria Stuart</li>
-    </ul> -->
-    <iframe class="trailerTitanic" width="400" height="225" src="https://www.youtube.com/embed/kVrqfYjkTdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</article>
-</section>
-<p class="busquedaUsuario"> Páginas del sitio relacionadas con <strong> "Titanic" </strong> </p>
-<section class="relacionadas">
-    <article class="relacionadasCajitas">
-        <a href="home.html"><h2 class="busquedaRelacionada" >PELICULAS POPULARES</h2> </a>
-        <!-- ICONOS -->
-    </article>
-    <article class="relacionadasCajitas">
-        <a href="genres.html"><h2 class="busquedaRelacionada" >GÉNEROS</h2></a>
-       <!-- ICONOS -->
-    </article>
-</section>
+                    <div class="infoTitanic">
+                        <h4>Duración</h4>
+                        <p>195 min</p>
+                    </div>
+
+                    <div class="infoTitanic">
+                        <h4>Calificación</h4>
+                        <p>8.8/10 <i class="fa-solid fa-star"></i></p>
+                    </div>
+                </article>
+                <iframe class="trailerTitanic" width="400" height="225" src="https://www.youtube.com/embed/kVrqfYjkTdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article>
+        </section>
+
+        <p class="busquedaUsuario"> Páginas del sitio relacionadas con <strong> "Titanic" </strong> </p>
+
+        <section class="relacionadas">
+            <article class="relacionadasCajitas">
+                <a href="home.html"><h2 class="busquedaRelacionada" >PELICULAS POPULARES</h2> </a>
+                <!-- ICONOS -->
+            </article>
+            
+            <article class="relacionadasCajitas">
+                <a href="genres.html"><h2 class="busquedaRelacionada" >GÉNEROS</h2></a>
+            <!-- ICONOS -->
+            </article>
+        </section>
+    </main>
 </body>
 </html>
+ <!--     <ul class="busquedainfo">
+            <li> <strong>Género: </strong><a href="./detail-genres.html">Romance</a></li>
+            <li><strong>Duracion: </strong> 195 minutos</li>
+            <li><strong>Calificación: </strong> 8.8/10 <i class="fa-solid fa-star"></i></li> 
+            <li> <strong>Elenco:</strong> Leonardo DiCaprio, Kate Winslet, Bily Zane, Kathy Bates, Bill Paxton y Gloria Stuart</li>
+        </ul> -->
+
