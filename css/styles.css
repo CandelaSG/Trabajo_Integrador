@@ -15,10 +15,11 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 /* HEADER */
-header{
+
+.contenedorHeader{
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     background-color:#16032fa2;
     padding: 10px;
@@ -28,39 +29,49 @@ header{
     font-family: "Outfit";
     font-size:larger;
 }
+.contenedorLogo{
+    width: 30vw;
+
+}
+
+.buscadorContainer{
+    width: 30vw;
+    display: flex;
+    justify-content: flex-end;
+}
   
-.buscar input{
-    
+.buscar{
     width: 150px;
     height: 25px;
     padding: 0 20px;
     font-size: 13px;
     color: #000;
     outline: none;
-    border: 1px solid silver;
+    border: 1px solid #22014d;
     border-radius: 30px;
-    transition: all 0.6 ease;
     font-family: "Roboto";
+    transition: width 0.5s ease-in-out;
 }
 
-.boton_buscar{
+.buscar:hover {
+    width: 200px;
+}
+
+.botonBuscar{
+    position: absolute;
+    top: 28px;
+    right: 10px;
+    line-height: 40px;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-color:#5b5168;
+    color:white;
+    border-radius: 50%;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 10px;
-}
+    align-items: center;
+    justify-content: center;
 
-.boton_buscar input{
-    height: 25px;
-    padding: 0 20px;
-    font-size: 13px;
-    color: #000;
-    outline: none;
-    border: 1px solid silver;
-    border-radius: 30px;
-    transition: all 0.6 ease;
-    font-family: "Roboto";
 }
 .menu{
     display: inline;
@@ -245,7 +256,7 @@ h3 {
 }
 
 /* SEARCH RESULTS */
-.buscar{
+.searchResults{
     background-repeat: repeat-y;
 }
 
