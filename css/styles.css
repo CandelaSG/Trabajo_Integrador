@@ -84,6 +84,7 @@ header{
     margin-top: 75px;
     margin-bottom: 55px;
 }
+
 /* PELICULAS Y SERIES */
 h2{
     margin-left: 50px;
@@ -137,7 +138,6 @@ h3 {
     font-family: "Outfit";
 }
 .data {
-    /*   background-color: rgba(0, 0, 0, 0.363); */
       display: flex;
       flex-wrap: nowrap;
       flex-direction: row;
@@ -239,6 +239,16 @@ h3 {
     text-align: center;
 }
 
+/* FAVORITOS */
+.favourite {
+    background-repeat: repeat-y;
+}
+
+/* SEARCH RESULTS */
+.buscar{
+    background-repeat: repeat-y;
+}
+
 /* FOOTER */
 footer{
     background-color:#16032fa2;
@@ -262,4 +272,3 @@ footer{
     font-size: 10px;
     text-align: right;
 }
-

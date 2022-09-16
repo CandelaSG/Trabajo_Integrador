@@ -11,20 +11,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body class="favourite">
-    <h1>FAVORITOS</h1>
-    <h2>Mis favoritos</h2>
+    <header>
+        <a href="./home.html"><img class="logo" src="./img/headerFooter/logo.png" alt="Logo Infinity"></a>
+        <nav class="lista menu">
+            <ul >
+                <li class="menu"> <a href="./home.html">HOME</a></li> |
+                <li class="menu"> <a href="./favourite.html">FAVORITOS</a></li> |
+                <li class="menu"> <a href="./genres.html">GENEROS</a></li> |
+            </ul>
+        </nav>
+        <form action="./search-results.html" method="GET">
+
+            <div class="buscar">
+            <input id="buscador" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ...">
+            </div>
+            <div class="boton_buscar">
+            <input type="submit" value="Buscar"></form>
+            </div>
+        
+    </header>
+    <h2>MIS FAVORITOS</h2>
     <section class="container">
-        <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/ppopulares/titanic.jpg" alt="Poster de 'Titanic'" ></a>
-        <a class="nombre" href="./detail-movie.html">Titanic</a>
-        <a class="año" href="./detail-movie.html">(1998)</a>
+        <article class="pelicula"><a href="./detail.series.html"><img class="poster" src="./img/spopulares/friends.jpg"></a>
+            <a class="nombre" href="./detail.series.html">Friends</a>
+            <a class="año" href="./detail-movie.html">(1994)</a>
+            </article>
         </article>
         <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/ppopulares/jumanji.jpeg" alt="Poster de 'Jumanji'"></a>
         <a class="nombre" href="./detail-movie.html">Jumanji</a>
         <a class="año" href="./detail-movie.html">(1995)</a>
         </article>
-        <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/ppopulares/el club de la pelea.jpg" alt="Poster de 'El club de la pelea'"></a>
-        <a class="nombre" href="./detail-movie.html">El club de la pelea</a>
-        <a class="año" href="./detail-movie.html">(1999)</a>
+        <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/pmasvaloradas/divergente.jpg"></a>
+            <a class="nombre" href="./detail-movie.html">Divergente</a>
+            <a class="año" href="./detail-movie.html">(2014)</a>
+            </article>
         </article>
         <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/ppopulares/laIslaSiniestra.jpeg" alt="Poster de 'La isla siniestra'" ></a>
         <a class="nombre" href="./detail-movie.html">La isla sinisestra</a>
@@ -35,12 +55,12 @@
         <a class="año" href="./detail-movie.html">(1999)</a>
         </article>
     </section>
-    <h2>También te puede interesar...</h2>
+    <h2>TAMBIÉN TE PUEDE INTERESAR...</h2>
     <section class="container">
-        <article class="pelicula"><a href="./detail.series.html"><img class="poster" src="./img/spopulares/friends.jpg"></a>
-            <a class="nombre" href="./detail.series.html">Friends</a>
-            <a class="año" href="./detail-movie.html">(1994)</a>
-        </article>
+        <article class="pelicula"><a href="./detail.series.html"><img class="poster" src="./img/spopulares/the vampire diaries.jpg"></a>
+            <a class="nombre" href="./detail.series.html">The Vampire Diaries</a>
+            <a class="año" href="./detail-movie.html">(2009)</a>
+            </article>
         <article class="pelicula"><a href="./detail.series.html"><img class="poster" src="./img/spopulares/los simuladores.jpg"></a>
             <a class="nombre" href="./detail.series.html">Los simuladores</a>
             <a class="año" href="./detail-movie.html">(2002)</a>
