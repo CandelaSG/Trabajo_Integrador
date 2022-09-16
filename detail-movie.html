@@ -12,8 +12,12 @@
     <title>Detail-movie</title>
 </head>
 <body>
-    <header>
+    <header class="contenedorHeader">
+        <article class="contenedorLogo">
         <a href="./home.html"><img class="logo" src="./img/headerFooter/logo.png" alt="Logo Infinity"></a>
+        </article>
+
+        <article>
         <nav class="lista menu">
             <ul >
                 <li class="menu"> <a href="./home.html">HOME</a></li> |
@@ -21,14 +25,15 @@
                 <li class="menu"> <a href="./genres.html">GENEROS</a></li> |
             </ul>
         </nav>
-        <form action="./search-results.html" method="GET">
+        </article>
 
-            <div class="buscar">
-            <input id="buscador" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ...">
-            </div>
-            <div class="boton_buscar">
-            <input type="submit" value="Buscar"></form>
-            </div>
+        <article>
+        <form action="./search-results.html" method="GET" class="buscadorContainer">
+            <input class="buscar" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..." required> 
+            <a class="botonBuscar" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
+         </form> 
+        </article>
+        
     </header>
     <h1 class="tituloDetail">DIVERGENTE</h1>
 

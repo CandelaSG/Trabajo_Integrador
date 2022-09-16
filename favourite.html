@@ -9,10 +9,16 @@
     <title>Favourite</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
 <body class="favourite">
-    <header>
+    <header class="contenedorHeader">
+        <article class="contenedorLogo">
         <a href="./home.html"><img class="logo" src="./img/headerFooter/logo.png" alt="Logo Infinity"></a>
+        </article>
+
+        <article>
         <nav class="lista menu">
             <ul >
                 <li class="menu"> <a href="./home.html">HOME</a></li> |
@@ -20,14 +26,14 @@
                 <li class="menu"> <a href="./genres.html">GENEROS</a></li> |
             </ul>
         </nav>
-        <form action="./search-results.html" method="GET">
+        </article>
 
-            <div class="buscar">
-            <input id="buscador" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ...">
-            </div>
-            <div class="boton_buscar">
-            <input type="submit" value="Buscar"></form>
-            </div>
+        <article>
+        <form action="./search-results.html" method="GET" class="buscadorContainer">
+            <input class="buscar" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..." required> 
+            <a class="botonBuscar" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
+         </form> 
+        </article>
         
     </header>
     <h2>MIS FAVORITOS</h2>

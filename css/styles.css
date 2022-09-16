@@ -204,14 +204,13 @@ h3 {
 .personaje{
     color: #4d3c62;
 }
-.busquedausuario {
-    font-family: "Roboto";
-    font-size: large;
-    padding-left: 50px;
-    padding-top: 15px;
-    color: white;
-    width: 560px;
+
+/* FAVORITOS */
+.favourite {
+    background-repeat: repeat-y;
 }
+
+/* SEARCH RESULTS */
 
 .infobusqueda {
     font-family: "Roboto";
@@ -239,10 +238,31 @@ h3 {
     height: 50px;
     align-items: flex-end;
 }
-.busquedarelacionada {
-    width: 160px;
-    height: 100px;
-    background-color: rgba(20, 20, 20, 0.252);
+.relacionadas{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.relacionadasCajitas{
+    display: flex;
+    flex-direction:column;
+    background-color: #5b5168;
+    border: 3px solid #22014d;
+    width:40vw;
+    height: 4vw;
+    align-items: center;
+}
+
+.busquedaUsuario {
+    font-family: "Roboto";
+    font-size: large;
+    padding-left: 50px;
+    padding-top: 15px;
+    color: white;
+    width: 560px;
+}
+.busquedaRelacionada {
     margin:5px;
     padding: 10px;
     align-items: center;
@@ -250,14 +270,48 @@ h3 {
     text-align: center;
 }
 
-/* FAVORITOS */
-.favourite {
-    background-repeat: repeat-y;
-}
-
-/* SEARCH RESULTS */
 .searchResults{
     background-repeat: repeat-y;
+}
+.containerResults{
+    background-color: rgba(0, 0, 0, 0.527);
+    width: 900px;
+    height: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-top: 20px;
+    font-family: "Roboto";
+    margin-left: 17vw;
+}
+.imgSearch{
+    height: 500px;
+    padding: 10px;
+}
+.infoPeliBusqueda{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top:0;
+}
+.trailerTitanic{
+    margin-top: 3vw;
+}
+.nombreTitanic{
+    font-family: "Outfit";
+    color: white;
+    font-size: 25px;
+}
+.cajitasInfo{
+    display: flex;
+    flex-direction: row;
+}
+.infoTitanic{
+    margin-right: 2vw;
+    background-color: rgba(0, 0, 0, 0.644);
+    color: white;
+    width: 9vw;
 }
 
 /* FOOTER */
@@ -279,7 +333,7 @@ footer{
     width: 200px;
 }
 .nombresFooter{
-    color: rgba(95, 87, 87, 0.512);
+    color: rgba(95, 87, 87, 0.692);
     font-size: 10px;
     text-align: right;
 }
