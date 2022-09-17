@@ -161,16 +161,16 @@ h3 {
   .trailer {
       justify-content: flex-start;
   }
-  .detailData {
+  .detailData{
       padding-left: 100px;
       color: white;
       width: 560px;
       font-family: "Roboto";
   }
-  
-  .listaData {
+  .listaData{
       list-style-type: none;
       font-family: "Roboto";
+      padding-left: 0px;
   }
   .sinopsis{
     margin-bottom: 30px;
@@ -212,14 +212,14 @@ h3 {
 
 /* SEARCH RESULTS */
 
-.infobusqueda {
+.infoBusqueda {
     font-family: "Roboto";
     font-size: medium;
     padding-left: 30px;
     color: gray;
     width: 560px;
 }
-.resultadobusqueda{
+/* .resultadoBusqueda{         Creo que esto no va (borrar)
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
@@ -237,7 +237,7 @@ h3 {
     padding-top: 0px;
     height: 50px;
     align-items: flex-end;
-}
+}                                   */
 .relacionadas{
     display: flex;
     flex-wrap: nowrap;
@@ -255,7 +255,7 @@ h3 {
 }
 
 .busquedaUsuario {
-    font-family: "Roboto";
+    font-family: "Outfit";
     font-size: large;
     padding-left: 50px;
     padding-top: 15px;
@@ -313,6 +313,15 @@ h3 {
     color: white;
     width: 9vw;
 }
+.favoritosSearch{
+    background-color: black;
+    padding: 13px;
+    border-radius: 15px;
+    width: 15vw;
+    justify-content: center;
+    margin: 2vw;
+    margin-left: 0vw;
+  }
 
 /* FOOTER */
 footer{
