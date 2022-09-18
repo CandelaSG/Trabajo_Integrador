@@ -384,4 +384,7 @@ footer{
 .posterGenres:hover{
     height: 310px;
 }
-
+/* GENRES DETAILS */
+.sitcom{
+    width: 100vw;
+}
