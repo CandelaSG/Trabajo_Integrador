@@ -85,8 +85,9 @@ body{
 .estrenoCont{
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
+    align-items:center;
 }
+
 .estreno{
     height: 600px;
     display: flex;
@@ -355,3 +356,32 @@ footer{
     font-size: 10px;
     text-align: right;
 }
+/* GENRES */
+
+.genres {
+    background-repeat: repeat-y;
+}
+
+.containerGeneros {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../img/genres/to\ and\ beyond.png);
+}
+
+.tituloGenres {
+    margin-top: 40px;
+}
+
+.posterGenres {
+    border-radius: 20px;
+    height: 300px;
+    transition: height 0.5s ease-in-out;
+}
+
+.posterGenres:hover{
+    height: 310px;
+}
+
