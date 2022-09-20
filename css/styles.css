@@ -124,11 +124,10 @@ h3 {
     flex-wrap: nowrap;
     flex-direction: row;
     margin-bottom: 2vw;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
+
     height: 25vw;
     width: 100vw;
-    justify-content:center;
+    justify-content:space-around;
 }
 
 .pelicula{
@@ -245,12 +244,46 @@ h3 {
 }
 /* SEARCH RESULTS */
 
+.busquedaUsuario {
+    font-family: "Outfit";
+    font-size: large;
+    padding-left: 50px;
+    padding-top: 15px;
+    color: white;
+    width: 560px;
+}
+
 .infoBusqueda {
     font-family: "Roboto";
     font-size: medium;
-    padding-left: 30px;
+    padding-left: 50px;
     color: gray;
     width: 560px;
+}
+
+.containerResults{
+    background-color: #1b051e5f;
+    width: 900px;
+    height: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-family: "Roboto";
+    margin-left: 17vw;
+    align-items: center;
+}
+
+.imgSearch{
+    height: 60vh;
+    padding: 10px;
+    margin-left: 10px;
+   
+}
+
+.nombreTitanic{
+    font-family: "Outfit";
+    color: white;
+    font-size: 25px;
 }
 
 .relacionadas{
@@ -263,21 +296,12 @@ h3 {
 .relacionadasCajitas{
     display: flex;
     flex-direction:column;
-    background-color: #5b5168;
-    border: 3px solid #22014d;
-    width:40vw;
+    background-color:rgba(0, 0, 0, 0.297);
+    width:25vw;
     height: 4vw;
     align-items: center;
 }
 
-.busquedaUsuario {
-    font-family: "Outfit";
-    font-size: large;
-    padding-left: 50px;
-    padding-top: 15px;
-    color: white;
-    width: 560px;
-}
 
 .busquedaRelacionada {
     margin:5px;
@@ -291,38 +315,16 @@ h3 {
     background-repeat: repeat-y;
 }
 
-.containerResults{
-    background-color: rgba(0, 0, 0, 0.527);
-    width: 900px;
-    height: 500px;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    margin-top: 20px;
-    font-family: "Roboto";
-    margin-left: 17vw;
-}
-.imgSearch{
-    height: 500px;
-    padding: 10px;
-}
-
 .infoPeliBusqueda{
     display: flex;
     flex-direction: column;
     margin-left: 5vw;
     margin-right: 5vw;
-    margin-top:0;
 }
 
 .trailerTitanic{
-    margin-top: 3vw;
-}
-
-.nombreTitanic{
-    font-family: "Outfit";
-    color: white;
-    font-size: 25px;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
 }
 
 .cajitasInfo{
@@ -332,21 +334,29 @@ h3 {
 
 .infoTitanic{
     margin-right: 2vw;
-    background-color: rgba(0, 0, 0, 0.644);
+    background-color: rgba(0, 0, 0, 0.36);
     color: white;
     width: 9vw;
     text-align: center;
 }
 
 .favoritosSearch{
+    align-items: center;
+    height: 6vh;
+    width: 13vw;
     background-color: black;
-    padding: 13px;
+    padding: 14px;
     border-radius: 15px;
-    width: 15vw;
-    justify-content: center;
-    margin: 2vw;
-    margin-left: 0vw;
+    justify-content: center;    
 }
+
+.botonFavorito {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
 
 /* FOOTER */
 footer{
@@ -408,21 +418,44 @@ footer{
     width: 100vw;
 }
 
-.sitcomInfo{
-    color: white;
-    background-color: rgba(0, 0, 0, 0.606);
-    text-align: left;
-    padding:20px;
-    margin-top: 2vw;
-    margin-bottom: 2vw;
-}
-
 .containerSitcom{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;  
+    margin-top: 20px;
+}
+
+.boton {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.verMas {
+    background-color: #ff3c5f;
+    border-radius: 15px;
+    padding: 20px;
+    height: 8vh;
+    transition: width 0.5s ease-in-out;
+}
+
+.botonVerMas {
+    color: white;
+    font-size:1vw;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Roboto";
+}
+
+.verMas:hover {
+    width: 9vw;
+    text-align: center;
 }
 
 
