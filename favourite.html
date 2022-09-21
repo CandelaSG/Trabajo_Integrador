@@ -6,24 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&display=swap" rel="stylesheet">
-    <title>Favourite</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>FAVORITOS</title>
+    <link rel="icon" type="image/x-icon" href="./img/header-footer/infinity.png">
 </head>
 
 <body class="favourite">
-    <header class="contenedorHeader">
-        <article class="contenedorLogo">
+    <header class="containerHeader">
+        <article>
             <a href="./home.html"><img class="logo" src="./img/header-footer/logo.png" alt="Logo Infinity"></a>
         </article>
-
+        
         <article>
-            <nav class="lista menu">
-                <ul >
+            <nav>
+                <ul>
                     <li class="menu"> <a href="./home.html">HOME</a></li> |
                     <li class="menu"> <a href="./favourite.html">FAVORITOS</a></li> |
-                    <li class="menu"> <a href="./genres.html">GENEROS</a></li> |
+                    <li class="menu"> <a href="./genres.html">GENEROS</a></li>
                 </ul>
             </nav>
         </article>
@@ -31,94 +33,169 @@
         <article>
             <form action="./search-results.html" method="GET" class="buscadorContainer">
                 <input class="buscar" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..." required> 
-                <a class="botonBuscar" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
+                <a class="lupa" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
             </form> 
         </article>
     </header>
 
     <main>
     <h2>MIS FAVORITOS</h2>
-        <section class="container">
-            <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/home/ppopulares/titanic.jpg" alt="Poster de 'Titanic'" ></a>
+        <section class="containerHome">
+            <article class="pelicula">
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/home/ppopulares/titanic.jpg" alt="Poster de 'Titanic'">
+                </a>
                 <a class="nombre" href="./detail-movie.html">Titanic</a>
-                <a class="año" href="./detail-movie.html">(1998)</a>
+                <a class="año" href="./detail-movie.html">1998</a>
             </article>
 
             <article class="pelicula">
-                <a href="./detail.series.html"><img class="poster" src="./img/home/spopulares/friends.jpg"></a>
-                <a class="nombre" href="./detail.series.html">Friends</a>
-                <a class="año" href="./detail-movie.html">(1994)</a>
+                <a href="./detail-series.html">
+                    <img class="poster" src="./img/home/spopulares/friends.jpg">
+                </a>
+                <a class="nombre" href="./detail-series.html">Friends</a>
+                <a class="año" href="./detail-movie.html">1994</a>
             </article>
 
             <article class="pelicula">
-                <a href="./detail-movie.html"><img class="poster" src="./img/home/pmasvaloradas/divergente.jpg"></a>
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/home/pmasvaloradas/divergente.jpg">
+                </a>
                 <a class="nombre" href="./detail-movie.html">Divergente</a>
-                <a class="año" href="./detail-movie.html">(2014)</a>
+                <a class="año" href="./detail-movie.html">2014</a>
             </article>
 
             <article class="pelicula">
-                <a href="./detail-movie.html"><img class="poster" src="./img/home/ppopulares/laIslaSiniestra.jpeg" alt="Poster de 'La isla siniestra'" ></a>
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/home/ppopulares/laIslaSiniestra.jpeg" alt="Poster de 'La isla siniestra'" >
+                </a>
                 <a class="nombre" href="./detail-movie.html">La isla sinisestra</a>
-                <a class="año" href="./detail-movie.html">(2010)</a>
+                <a class="año" href="./detail-movie.html">2010</a>
             </article>
 
             <article class="pelicula">
-                <a href="./detail-movie.html"><img class="poster" src="./img/home/ppopulares/matrix.jpg" alt="Poster de 'Matrix'" > </a>
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/home/ppopulares/matrix.jpg" alt="Poster de 'Matrix'">
+                </a>
                 <a class="nombre" href="./detail-movie.html">Matrix</a>
-                <a class="año" href="./detail-movie.html">(1999)</a>
+                <a class="año" href="./detail-movie.html">1999</a>
             </article>
             
             <article class="pelicula">
-                <a href="./detail-movie.html"><img class="poster" src="./img/home/spopulares/gossipGirl.jpeg" alt="Poster de 'Gossip Girl'" > </a>
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/home/spopulares/gossipGirl.jpeg" alt="Poster de 'Gossip Girl'">
+                </a>
                 <a class="nombre" href="./detail-movie.html">Gossip Girl</a>
-                <a class="año" href="./detail-movie.html">(2007)</a>
+                <a class="año" href="./detail-movie.html">2007</a>
+            </article>
+
+        </section>
+        <section class="containerHome">
+            <article class="pelicula">
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/genres/ciencia ficción/avatar.jpg" alt="Poster de Avatar" >
+                </a>
+                <a class="nombre" href="./detail-movie.html">Avatar</a>
+                <a class="año" href="./detail-movie.html">2009</a>
+            </article>
+
+            <article class="pelicula">
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/genres/comedia/americanpie.jpg" alt="Poster de American Pie">
+                </a>
+                <a class="nombre" href="./detail-movie.html">American Pie: Reunion</a>
+                <a class="año" href="./detail-movie.html">2012</a>
+            </article>
+
+            <article class="pelicula">
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/genres/comedia/papaporsorpresa.jpg" alt="Poster de Papa por Sorpresa" >
+                </a>
+                <a class="nombre" href="./detail-movie.html">Papá por sorpresa</a>
+                <a class="año" href="./detail-movie.html">2007</a>
+            </article>
+
+            <article class="pelicula">
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/genres/romance/cuestiondetiempo.jpg" alt="Poster de Cuestión de Tiempo" >
+                </a>
+                <a class="nombre" href="./detail-movie.html">Cuestión de tiempo</a>
+                <a class="año" href="./detail-movie.html">2013</a>
+            </article>
+
+            <article class="pelicula">
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/genres/romance/10thingsihateaboutyou.jpg" alt="Poster de 10 Cosas que Odio de Ti">
+                </a>
+                <a class="nombre" href="./detail-movie.html">10 Cosas que Odio de Ti</a>
+                <a class="año" href="./detail-movie.html">1999</a>
+            </article>
+            
+            <article class="pelicula">
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/genres/fantasia/hp.jpg" alt="Poster de Harry Potter">
+                </a>
+                <a class="nombre" href="./detail-movie.html">Harry Potter</a>
+                <a class="año" href="./detail-movie.html">2001</a>
             </article>
 
         </section>
 
     <h2>TAMBIÉN TE PUEDE INTERESAR...</h2>
-        <section class="container">
+        <section class="containerHome">
             <article class="pelicula">
-                <a href="./detail.series.html"><img class="poster" src="./img/home/pmasvaloradas/hush.jpeg"></a>
-                <a class="nombre" href="./detail.series.html">Hush</a>
-                <a class="año" href="./detail-movie.html">(2016)</a>
+                <a href="./detail-series.html">
+                    <img class="poster" src="./img/home/pmasvaloradas/hush.jpeg">
+                </a>
+                <a class="nombre" href="./detail-series.html">Hush</a>
+                <a class="año" href="./detail-movie.html">2016</a>
             </article>
             <article class="pelicula">
-                <a href="./detail.series.html"><img class="poster" src="./img/home/spopulares/the vampire diaries.jpg"></a>
-                <a class="nombre" href="./detail.series.html">The Vampire Diaries</a>
-                <a class="año" href="./detail-movie.html">(2009)</a>
-            </article>
-
-            <article class="pelicula">
-                <a href="./detail.series.html"><img class="poster" src="./img/home/spopulares/los simuladores.jpg"></a>
-                <a class="nombre" href="./detail.series.html">Los simuladores</a>
-                <a class="año" href="./detail-movie.html">(2002)</a>
+                <a href="./detail-series.html">
+                    <img class="poster" src="./img/home/spopulares/the vampire diaries.jpg">
+                </a>
+                <a class="nombre" href="./detail-series.html">The Vampire Diaries</a>
+                <a class="año" href="./detail-movie.html">2009</a>
             </article>
 
             <article class="pelicula">
-                <a href="./detail.series.html"><img class="poster" src="./img/home/spopulares/la casa de papel.jpg"></a>
-                <a class="nombre" href="./detail.series.html">La casa de papel</a>
-                <a class="año" href="./detail-movie.html">(2017)</a>
+                <a href="./detail-series.html">
+                    <img class="poster" src="./img/home/spopulares/los simuladores.jpg">
+                </a>
+                <a class="nombre" href="./detail-series.html">Los simuladores</a>
+                <a class="año" href="./detail-movie.html">2002</a>
             </article>
 
             <article class="pelicula">
-                <a href="./detail-movie.html"><img class="poster" src="./img/home/pmasvaloradas/the truman show.jpg"></a>
+                <a href="./detail-series.html">
+                    <img class="poster" src="./img/home/spopulares/la casa de papel.jpg">
+                </a>
+                <a class="nombre" href="./detail-series.html">La casa de papel</a>
+                <a class="año" href="./detail-movie.html">2017</a>
+            </article>
+
+            <article class="pelicula">
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/home/pmasvaloradas/the truman show.jpg">
+                </a>
                 <a class="nombre" href="./detail-movie.html">The Truman Show</a>
-                <a class="año" href="./detail-movie.html">(1998)</a>
+                <a class="año" href="./detail-movie.html">1998</a>
             </article>
 
             <article class="pelicula">
-                <a href="./home.html"><img class="posterVerMas" src="./img/ver-mas/VerMas Fav.png"></a>
+                <a href="./home.html">
+                    <img class="posterVerMas" src="./img/ver-mas/favouriteVerMas.png">
+                </a>
             </article>
 
         </section>
     </main> 
     <footer>
-        <div class="divFooter">
-            <a class="fraseFooter" href="./home.html"><img class="imgFooter" src="./img/header-footer/footer.png" alt="To infinity and beyond"></a>
-            <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
-        </div>   
-    </footer>     
+        <a class="fraseFooter" href="./home.html">
+            <img class="imgFooter" src="./img/header-footer/footer.png" alt="To infinity and beyond">
+        </a>
+        <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
+</footer>    
     
 </body>
 </html>

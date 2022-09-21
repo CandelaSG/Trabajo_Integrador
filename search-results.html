@@ -9,113 +9,132 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     
-    <title>Search-results</title>
+    <title>RESULTADOS</title>
+    <link rel="icon" type="image/x-icon" href="./img/header-footer/infinity.png">
 </head>
-<body class="searchResults">
-    <header class="contenedorHeader">
-        <article class="contenedorLogo">
-        <a href="./home.html"><img class="logo" src="./img/header-footer/logo.png" alt="Logo Infinity"></a>
-        </article>
-
+<body>
+    <header class="containerHeader">
         <article>
-            <nav class="lista menu">
-                <ul >
+            <a href="./home.html"><img class="logo" src="./img/header-footer/logo.png" alt="Logo Infinity"></a>
+        </article>
+        
+        <article>
+            <nav>
+                <ul>
                     <li class="menu"> <a href="./home.html">HOME</a></li> |
                     <li class="menu"> <a href="./favourite.html">FAVORITOS</a></li> |
-                    <li class="menu"> <a href="./genres.html">GENEROS</a></li> |
+                    <li class="menu"> <a href="./genres.html">GENEROS</a></li>
                 </ul>
             </nav>
         </article>
 
         <article>
-            <form action="./search-results.html" method="GET" class="buscadorContainer">
+            <form action="./search-results.html" method="GET" class="searchContainer">
                 <input class="buscar" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..." required> 
-                <a class="botonBuscar" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
+                <a class="lupa" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
             </form> 
-        </article>
+       </article>
     </header>
 
-    <p class="busquedaUsuario"> Tu búsqueda fue: <strong> "Titanic" </strong>  </p>
-    <p class="infoBusqueda"> Cerca de 10 resultados (0,45 segundos) </p> 
-
     <main>
+        <p class="resultText"> Tu búsqueda fue: "Titanic"</p>
+        
         <section class="containerResults">
             <article>
-                <a href="./detail-movie.html"><img class="imgSearch" src="./img/home/ppopulares/titanic.jpg" alt="Poster de 'Titanic'"></a>
+                <a href="./detail-movie.html">
+                    <img class="imgSearch" src="./img/home/ppopulares/titanic.jpg" alt="Poster de 'Titanic'">
+                </a>
             </article>
             
-            <article class="infoPeliBusqueda">
-                <h3 class="nombreTitanic">TITANIC - 1997</h3>
-                <article class="cajitasInfo">
+            <article class="peliSearch">
+                <h3 class="tituloTitanic">TITANIC - 1997</h3>
+                <article class="infoBox">
                     <div class="infoTitanic">
-                        <a href="./genres.html"><h4>Género <i class="fa-solid fa-masks-theater"></i></h4></a>
-                        <a href="./detail-genres.html">Romance</a>
+                        <a href="./genres.html"><h3 class="h3Search">Género <i class="fa-solid fa-masks-theater"></i></h3></a>
+                        <a href="./detail-genres.html"><strong>Romance</strong></a>
                     </div>
 
                     <div class="infoTitanic">
-                        <h4>Duración <i class="fa-solid fa-clock"></i></h4>
+                        <h3 class="h3Search">Duración <i class="fa-solid fa-clock"></i></h3>
                         <p>195 min</p>
                     </div>
 
                     <div class="infoTitanic">
-                        <h4>Calificación <i class="fa-solid fa-star"></i></h4>
+                        <h3 class="h3Search">Calificación <i class="fa-solid fa-star"></i></h3>
                         <p> 8.8/10</p>
                     </div>
                 </article>
-                <iframe class="trailerTitanic" width="400" height="225" src="https://www.youtube.com/embed/kVrqfYjkTdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                <iframe class="trailerTitanic" src="https://www.youtube.com/embed/kVrqfYjkTdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>            
+                </iframe>
 
             <article class="favoritosSearch">
                 <a class="botonFavorito" href="./favourite.html"> 🤍 Agregar a favoritos</a>
             </article>
         </section>
 
-        <p class="busquedaUsuario"> Páginas del sitio relacionadas con <strong> "Titanic" </strong> </p>
+        <p class="resultText"> Páginas del sitio relacionadas</p>
 
-        <section class="relacionadas">
-            <article class="relacionadasCajitas">
-                <a href="home.html"><h2 class="busquedaRelacionada" >PELÍCULAS POPULARES <i class="fa-solid fa-fire"></i></h2> </a>
+        <section class="relacionadasContainer">
+            <article class="relacionadas">
+                <a href="home.html"><h2>PELÍCULAS POPULARES  <i class="fa-solid fa-fire"></i></h2></a>
             </article>
             
-            <article class="relacionadasCajitas">
-                <a href="genres.html"><h2 class="busquedaRelacionada" >GÉNEROS <i class="fa-solid fa-masks-theater"></i></h2></a>
+            <article class="relacionadas">
+                <a href="genres.html"><h2>GÉNEROS  <i class="fa-solid fa-masks-theater"></i></h2></a>
             </article>
         </section>
 
-        <p class="busquedaUsuario"> Películas relacionadas con <strong> "Titanic" </strong> </p>
+        <p class="resultText"> Películas relacionadas</p>
         
-        <section class="container">
-            <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/search-results/1917.jpg"></a>
+        <section class="containerHome">
+            <article class="pelicula">
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/search-results/1917.jpg">
+                </a>
                 <a class="nombre" href="./detail-movie.html">1917</a>
-                <a class="año" href="./detail-movie.html">(2019)</a>
+                <a class="año" href="./detail-movie.html">2019</a>
             </article>
     
-            <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/search-results/sully.jpg"></a>
+            <article class="pelicula">
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/search-results/sully.jpg">
+                </a>
                 <a class="nombre" href="./detail-movie.html">Sully</a>
-                <a class="año" href="./detail-movie.html">(2016)</a>
+                <a class="año" href="./detail-movie.html">2016</a>
             </article>
             
-            <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/search-results/lifeOfPi.jpg"></a>
+            <article class="pelicula">
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/search-results/lifeOfPi.jpg">
+                </a>
                 <a class="nombre" href="./detail-movie.html">Life of Pi</a>
-                <a class="año" href="./detail-movie.html">(2012)</a>
-            </article>
-
-            <article class="pelicula"><a href="./detail-movie.html"><img class="poster" src="./img/search-results/dunkirk.jpg"></a>
-                <a class="nombre" href="./detail-movie.html">Dunkirk</a>
-                <a class="año" href="./detail-movie.html">(2017)</a>
+                <a class="año" href="./detail-movie.html">2012</a>
             </article>
 
             <article class="pelicula">
-                <a href="./home.html"><img class="posterVerMas" src="./img/ver-mas/DEFINITIVO Poster Ver mas .png"></a>
+                <a href="./detail-movie.html">
+                    <img class="poster" src="./img/search-results/dunkirk.jpg">
+                </a>
+                <a class="nombre" href="./detail-movie.html">Dunkirk</a>
+                <a class="año" href="./detail-movie.html">2017</a>
             </article>
+
+            <article class="pelicula">
+                <a href="./home.html">
+                    <img class="posterVerMas" src="./img/ver-mas/searchVerMas.png">
+                </a>
+            </article>
+
         </section>
     </main>
 
     <footer>
-        <div class="divFooter">
-            <a class="fraseFooter" href="./home.html"><img class="imgFooter" src="./img/header-footer/footer.png" alt="To infinity and beyond"></a>
-            <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
-        </div>   
-    </footer>
+        <a class="fraseFooter" href="./home.html">
+            <img class="imgFooter" src="./img/header-footer/footer.png" alt="To infinity and beyond">
+        </a>
+        <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
+</footer>
 </body>
 </html>
 

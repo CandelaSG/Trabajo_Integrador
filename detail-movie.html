@@ -8,21 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <title>Detail-movie</title>
+    <title>DETALLE PELÍCULA</title>
+    <link rel="icon" type="image/x-icon" href="./img/header-footer/infinity.png">
 </head>
 
 <body>
-    <header class="contenedorHeader">
-        <article class="contenedorLogo">
+    <header class="containerHeader">
+        <article>
             <a href="./home.html"><img class="logo" src="./img/header-footer/logo.png" alt="Logo Infinity"></a>
         </article>
-
+        
         <article>
-            <nav class="lista menu">
-                <ul >
+            <nav>
+                <ul>
                     <li class="menu"> <a href="./home.html">HOME</a></li> |
                     <li class="menu"> <a href="./favourite.html">FAVORITOS</a></li> |
-                    <li class="menu"> <a href="./genres.html">GENEROS</a></li> |
+                    <li class="menu"> <a href="./genres.html">GENEROS</a></li>
                 </ul>
             </nav>
         </article>
@@ -30,7 +31,7 @@
         <article>
             <form action="./search-results.html" method="GET" class="buscadorContainer">
                 <input class="buscar" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..." required> 
-                <a class="botonBuscar" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
+                <a class="lupa" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
             </form> 
         </article>
     </header>
@@ -38,19 +39,19 @@
 <main>
     <h1 class="tituloDetail">DIVERGENTE</h1>
 
-    <section class="data">
-        <article class="trailer">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/IioBZ0rJdyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <section class="infoContainer">
+        <article>
+            <iframe class="trailer"  src="https://www.youtube.com/embed/IioBZ0rJdyI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </article>
 
-        <article class="detailData">
-            <ul class="listaData">
-                <li>Fecha de estreno: 2014</li>
-                <li>Género: <a href="./detail-genres.html">Acción</a></li>
-                <li>Duracion: 140 minutos</li>
-                <li>Calificación: 9.8/10 <i class="fa-solid fa-star"></i></li> 
-                <li>Elenco: Shailine Woodley, Theo James, Miles Teller, Kate Winslet, Ansel Elgort y Zoë Kravitz</li>
-            </ul>
+        <article class="infoDetail">
+            <ul class="listaDetail">
+                <li><strong class="decoracion">Fecha de estreno:</strong>   2014</li>
+                <li><strong class="decoracion">Género:</strong> <a href="./detail-genres.html">  <u>acción</u></a></li>
+                <li><strong class="decoracion">Duracion:</strong>   140 minutos</li>
+                <li><strong class="decoracion">Calificación:</strong>     9.2/10 <i class="fa-solid fa-star"></i></li> 
+                <li><strong class="decoracion">Elenco:</strong>   Shailine Woodley, Theo James, Miles Teller, Kate Winslet, Ansel Elgort y Zoë Kravitz</li>
+            </ul> 
 
             <h3>SINOPSIS</h3>
 
@@ -62,8 +63,8 @@
     <section class="castFotos">
         <article class="elenco">
         <a href="https://es.wikipedia.org/wiki/Shailene_Woodley">
-            <img src="./img/detail-serie-peli/elencos/beatrice.png" alt="Tris">
-            <p class="actor">Shailene Woodley</p>
+            <img class="posterElenco" src="./img/detail-serie-peli/elencos/beatrice.png" alt="Tris">
+            <p>Shailene Woodley</p>
             <p class="personaje">Beatrice Prior</p>
         </a>
         </article>
@@ -71,7 +72,7 @@
         <article class="elenco">
             <a href="https://es.wikipedia.org/wiki/Theo_James">
             <img src="./img/detail-serie-peli/elencos/four.png" alt="Cuatro">
-            <p class="actor">Theo James</p>
+            <p>Theo James</p>
             <p class="personaje">Cuatro</p>
         </a>
         </article>
@@ -79,7 +80,7 @@
         <article class="elenco">
             <a href="https://es.wikipedia.org/wiki/Miles_Teller">
             <img src="./img/detail-serie-peli/elencos/peter.png" alt="Peter">
-            <p class="actor">Miles Teller</p>
+            <p>Miles Teller</p>
             <p class="personaje">Peter</p>
         </a>
         </article>
@@ -87,7 +88,7 @@
         <article class="elenco">
             <a href="https://es.wikipedia.org/wiki/Kate_Winslet">
             <img src="./img/detail-serie-peli/elencos/jeanine.png" alt="Jeanine">
-            <p class="actor">Kate Winslet</p>
+            <p>Kate Winslet</p>
             <p class="personaje">Jeanine Matthews</p>
         </a>
         </article>
@@ -95,7 +96,7 @@
         <article class="elenco">
             <a href="https://es.wikipedia.org/wiki/Zo%C3%AB_Kravitz">
             <img src="./img/detail-serie-peli/elencos/christina.png" alt="Christina">
-            <p class="actor">Zoë Kravitz</p>
+            <p>Zoë Kravitz</p>
             <p class="personaje">Christina</p>
         </a>
         </article>
@@ -103,7 +104,7 @@
         <article class="elenco">
             <a href="https://es.wikipedia.org/wiki/Ansel_Elgort">
             <img src="./img/detail-serie-peli/elencos/caleb.png" alt="Caleb">
-            <p class="actor">Ansel Elgort</p>
+            <p>Ansel Elgort</p>
             <p class="personaje">Caleb Prior</p>
         </a>
         </article>
@@ -112,11 +113,10 @@
 </main>
 
 <footer>
-    <div class="divFooter">
-        <a class="fraseFooter" href="./home.html"><img class="imgFooter" src="./img/header-footer/footer.png" alt="To infinity and beyond"></a>
+        <a class="fraseFooter" href="./home.html">
+            <img class="imgFooter" src="./img/header-footer/footer.png" alt="To infinity and beyond">
+        </a>
         <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
-    </div>   
-</footer>
-
+    </footer>
 </body>
 </html>
