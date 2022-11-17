@@ -129,8 +129,8 @@ h3 {
 }
 
 .poster{
-    height: 35vh;
-    width: 14vw;
+    height: 34vh;
+    width: 13vw;
     transition: 0.4s ease-in-out;
 }
 
@@ -250,7 +250,7 @@ h3 {
     margin-right: 5vw;
 }
 
-.tituloTitanic{
+.tituloSearch{
     color: white;
     font-size: 25px;
 }
@@ -433,7 +433,7 @@ footer{
         font-size:20px;
     }
 
-    .infoTitanic{
+    .infoSearch{
         width: 13vw;
         font-size: 13px;
     }
