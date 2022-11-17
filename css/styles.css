@@ -222,13 +222,11 @@ h3 {
     font-weight: bold;
     font-size: 1.5vw;
     padding-left: 50px;
-    padding-top: 15px;
     color: white;
     width: 560px;
     font-family: "Outfit";
 }
 
-/* INFO TITANIC */
 .containerResults{
     background-color: #1b051e5f;
     width: 63vw;
@@ -253,6 +251,7 @@ h3 {
 .tituloSearch{
     color: white;
     font-size: 25px;
+    text-align: center;
 }
 
 .infoBox{
@@ -260,7 +259,7 @@ h3 {
     flex-direction: row;
 }
 
-.infoTitanic{
+.infoSearch{
     margin-right: 1vw;
     background-color: rgba(0, 0, 0, 0.36);
     color: white;
@@ -268,10 +267,10 @@ h3 {
     text-align: center;
 }
 
-.trailerTitanic{
+.trailerSearch{
     margin-top: 1vw;
     margin-bottom: 1vw;
-    width:417px; 
+    width:445px; 
     height:225px;
 }
 
@@ -416,7 +415,8 @@ a{
     }
 /* SEARCH RESULTS */
     .resultText{
-        font-size: 15px;
+        font-size: 10px;
+        font-weight: lighter;
     }
     .containerResults{
         width: 75vw;
@@ -433,7 +433,7 @@ a{
         margin-right: 3vw;
     }
 
-    .tituloTitanic{
+    .tituloSearch{
         font-size:20px;
     }
 
@@ -445,7 +445,7 @@ a{
     .h3Search{
         font-size: 13px;
     }
-    .trailerTitanic{
+    .trailerSearch{
         width:315px; 
         height:150px;
     }

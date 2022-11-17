@@ -16,10 +16,17 @@ fetch(endpointpp)
             let año = info[i].release_date.slice(0,4)
             let img = `https://image.tmdb.org/t/p/original/${info[i].poster_path}`
             ppopulares += `<article class="pelicula">
-                                <a href="./detail-movie.html">
-                                <img class="poster" src=${img} alt='Poster de '${titulo}'/> </a>
-                                <a class="nombre" href="./detail-movie.html">${titulo}</a>
-                                <a class="año" href="./detail-movie.html">${año}</a>
+                                <a href="detail-movie.html?id=${info[i].id}">
+                                    <img class="poster" src=${img} alt='Poster de '${titulo}'>
+                                </a>
+
+                                <a class="nombre" href='detail-movie.html?id=${info[i].id}'>
+                                ${titulo}
+                                </a>
+
+                                <a class="año" href="detail-movie.html?id=${info[i].id}">
+                                ${año}
+                                </a>
                             </article>`
             }
             container.innerHTML = ppopulares;
@@ -47,10 +54,10 @@ fetch(endpointsp)
             let año = info[i].first_air_date.slice(0,4)
             let img = `https://image.tmdb.org/t/p/original/${info[i].poster_path}`
             spopulares += `<article class="pelicula">
-                                <a href="./detail-movie.html">
-                                <img class="poster" src=${img} alt='Poster de '${titulo}'/> </a>
-                                <a class="nombre" href="./detail-movie.html">${titulo}</a>
-                                <a class="año" href="./detail-movie.html">${año}</a>
+                                <a href="detail-series.html?id=${info[i].id}">
+                                <img class="poster" src=${img} alt='Poster de '${titulo}'> </a>
+                                <a class="nombre" href="detail-series.html?id=${info[i].id}">${titulo}</a>
+                                <a class="año" href="detail-series.html?id=${info[i].id}">${año}</a>
                             </article>`
             }
             container.innerHTML = spopulares;
@@ -78,10 +85,10 @@ fetch(endpointpv)
             let año = info[i].release_date.slice(0,4)
             let img = `https://image.tmdb.org/t/p/original/${info[i].poster_path}`
             pValoradas += `<article class="pelicula">
-                                <a href="./detail-movie.html">
+                                <a href="detail-movie.html?id=${info[i].id}">
                                 <img class="poster" src=${img} alt='Poster de '${titulo}'/> </a>
-                                <a class="nombre" href="./detail-movie.html">${titulo}</a>
-                                <a class="año" href="./detail-movie.html">${año}</a>
+                                <a class="nombre" href="detail-movie.html?id=${info[i].id}">${titulo}</a>
+                                <a class="año" href="detail-movie.html?id=${info[i].id}">${año}</a>
                             </article>`
             }
             container.innerHTML = pValoradas;
