@@ -5,12 +5,23 @@ fetch(endpoint)
         return response.json();
     })
     .then(function(data){
+        let container = document.querySelector(".containerHome");
+        let pGeneros = "";
         info = data.genres
         //console.log(info)
         for (let i=0; i<=data.lenght; i++){
            genero = info[i].get("name")
-           console.log(genero)
-        }
+           pGeneros += `<article class="pelicula">
+                            <a href="genres.html?id=${info[i].id}">
+                                <img class="poster" src=${img} alt='Poster de '${titulo}'/> </a>
+
+                            <a class="nombre" href="genres.html?id=${info[i].id}">${titulo}</a>
+                            
+                            <a class="año" href="genres.html?id=${info[i].id}">${año}</a>
+                        </article>`
+            }
+            container.innerHTML = pGeneros;
+
         })
 
     .catch(function(error){
