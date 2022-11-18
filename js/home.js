@@ -6,12 +6,12 @@ fetch(endpointpp)
         return response.json();
     })
     .then(function(data){
-        //console.log(data);
         let container = document.querySelector(".peliculasPopulares");
         let ppopulares = '';
         let info = data.results
         
         for (let i= 0; i<=6; i++){
+            let num_iden = i
             let titulo = info[i].title
             let año = info[i].release_date.slice(0,4)
             let img = `https://image.tmdb.org/t/p/original/${info[i].poster_path}`
@@ -20,7 +20,7 @@ fetch(endpointpp)
                                     <img class="poster" src=${img} alt='Poster de '${titulo}'>
                                 </a>
 
-                                <a class="nombre" href='detail-movie.html?id=${info[i].id}'>
+                                <a class="nombre" href="detail-movie.html?id=${info[i].id}">
                                 ${titulo}
                                 </a>
 
