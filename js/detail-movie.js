@@ -73,7 +73,8 @@ fetch(endpointMovie)
                         <h3>SINOPSIS</h3>
 
                         <p class="sinopsis">${data.overview}</p>        
-                        <a class="favoritos" href="./favourite.html"> 🤍 Agregar a favoritos</a>
+                        <a class="favoritos clave" href=""> 🤍 Agregar a favoritos</a>
+                        <a class="favoritos clave" href="./favourite.html"> Ver Favoritos</a>
                     </article>`
             section.innerHTML = texto
             })
