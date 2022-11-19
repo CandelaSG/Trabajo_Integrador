@@ -56,6 +56,8 @@ h3 {
 /* MENÚ BÚSQUEDA */
 .menu{
     display: inline;
+    text-decoration: none;
+    color: white;
 }
 
 /* BUSCADOR */
@@ -74,12 +76,14 @@ h3 {
     outline: none;
     border: 1px solid #22014d;
     border-radius: 30px;
-    transition: width 0.5s ease-in-out;
+    /* transition: width 0.5s ease-in-out; */
 }
-
-.buscar:hover {
+.containerMenu{
+    margin-left: 8.5vw;
+}
+/* .buscar:hover {
     width: 200px;
-}
+} */
 
 .lupa{
     position: fixed;
@@ -132,13 +136,13 @@ h3 {
 .poster{
     height: 34vh;
     width: 13vw;
-    transition: 0.4s ease-in-out;
+    /* transition: 0.4s ease-in-out; */
 }
 
-.poster:hover{
+/* .poster:hover{
     width: 15vw;
     height: 36vh;
-}
+} */
 
 .nombre{
     display: block;
@@ -165,6 +169,10 @@ h3 {
     justify-content: center;
     margin: 2vw 0 2vw 0;
 }
+.posterDetail{
+    width:20vw;
+    height:45vh; 
+}
 .trailer{
     width:38vw;
     height:35vh;   
@@ -182,11 +190,20 @@ h3 {
 .decoracion{
     color:#75376e;
 }
-.sinopsis{
-    margin-bottom: 3vw;
-}
 
+.seccionFav{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end; 
+    margin-bottom: 10vw;
+}
+.artFav{
+    margin-left: 25vw;
+}
 .buttonFav{
+    
     background-color: black;
     padding: 13px;
     border-radius: 15px;
@@ -215,6 +232,28 @@ h3 {
 
 .personaje{
     color: #4d3c62;
+}
+/* FAVORITOS */
+.tituloFav{
+    margin:0 ;
+    padding-bottom: 1vw;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.252);
+}
+.containerFav{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-bottom: 11vw;
+    height: 25vh;
+    width: 100vw;
+    justify-content:flex-start;
+}
+.peliFav{
+    justify-content: center;
+    padding-left:1.5vw;
+    padding-right: 1.5vw;
+    width: 16vw;
 }
 
 /* SEARCH RESULTS */

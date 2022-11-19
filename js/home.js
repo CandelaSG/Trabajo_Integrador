@@ -11,13 +11,12 @@ fetch(endpointpp)
         let info = data.results
         
         for (let i= 0; i<=6; i++){
-            let num_iden = i
             let titulo = info[i].title
             let año = info[i].release_date.slice(0,4)
             let img = `https://image.tmdb.org/t/p/original/${info[i].poster_path}`
             ppopulares += `<article class="pelicula">
                                 <a href="detail-movie.html?id=${info[i].id}">
-                                    <img class="poster" src=${img} alt='Poster de '${titulo}'>
+                                    <img class="poster posterEvento" src=${img} alt='Poster de '${titulo}'>
                                 </a>
 
                                 <a class="nombre" href="detail-movie.html?id=${info[i].id}">
@@ -55,7 +54,7 @@ fetch(endpointsp)
             let img = `https://image.tmdb.org/t/p/original/${info[i].poster_path}`
             spopulares += `<article class="pelicula">
                                 <a href="detail-series.html?id=${info[i].id}">
-                                <img class="poster" src=${img} alt='Poster de '${titulo}'> </a>
+                                <img class="poster posterEvento" src=${img} alt='Poster de '${titulo}'> </a>
                                 <a class="nombre" href="detail-series.html?id=${info[i].id}">${titulo}</a>
                                 <a class="año" href="detail-series.html?id=${info[i].id}">${año}</a>
                             </article>`
@@ -86,7 +85,7 @@ fetch(endpointpv)
             let img = `https://image.tmdb.org/t/p/original/${info[i].poster_path}`
             pValoradas += `<article class="pelicula">
                                 <a href="detail-movie.html?id=${info[i].id}">
-                                <img class="poster" src=${img} alt='Poster de '${titulo}'/> </a>
+                                <img class="poster posterEvento" src=${img} alt='Poster de '${titulo}'/> </a>
                                 <a class="nombre" href="detail-movie.html?id=${info[i].id}">${titulo}</a>
                                 <a class="año" href="detail-movie.html?id=${info[i].id}">${año}</a>
                             </article>`
@@ -98,7 +97,12 @@ fetch(endpointpv)
         console.log(error);
     })
 
+//Prueba
+/* let posterPeli= document.querySelector("posterEvento");
+posterPeli.addEventListener("mouseover", function(){
+        poster.style.color="#444";
 
+}) */
 
 
 
