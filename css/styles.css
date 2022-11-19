@@ -67,6 +67,7 @@ h3 {
 .buscar{
     width: 165px;
     height: 25px;
+    margin: 0 50px;
     padding: 0 20px;
     font-size: 13px;
     color: #000;
@@ -81,8 +82,8 @@ h3 {
 }
 
 .lupa{
-    position: absolute;
-    top: 28px;
+    position: fixed;
+    top: 32px;
     right: 10px;
     cursor: pointer;
     width: 3vw;
