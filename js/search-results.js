@@ -9,7 +9,7 @@ window.addEventListener('load', function (e) {
     //P 
     let pBusqueda = document.querySelector('.resultText');
     let textoBusqueda = '';
-/*     //BOTON
+    //BOTON
     let boton= document.querySelector(".boton");
     boton.addEventListener("click",function(e){
         if (aBuscar.length<=3){
@@ -18,7 +18,7 @@ window.addEventListener('load', function (e) {
         } else{
             window.open(this)
         }
-    }) */
+    })
     // CONTAINER 
     let containerResult = document.querySelector('.containerResults');
     let result = '';

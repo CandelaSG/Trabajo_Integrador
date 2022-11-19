@@ -186,7 +186,7 @@ h3 {
     margin-bottom: 3vw;
 }
 
-.favoritos{
+.buttonFav{
     background-color: black;
     padding: 13px;
     border-radius: 15px;
@@ -285,10 +285,7 @@ h3 {
     justify-content: center; 
 }
 
-.botonFavorito {
-    font-size: 16px;
-    text-align: center;
-}
+
 
 /*PÁGINAS RELACIONADAS*/
 .relacionadasContainer{
@@ -396,7 +393,7 @@ a{
         font-size: 11.5px;
     }
 
-    .favoritos{
+    .buttonFav{
         padding: 10px;
         border-radius: 15px;
     }

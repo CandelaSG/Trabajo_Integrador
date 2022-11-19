@@ -1,16 +1,17 @@
 let queryString = location.search; //Obtengo la QS
 let queryStringToObject = new URLSearchParams(queryString); //La trasnformo en OL
 let movieId = queryStringToObject.get('id');
-console.log(movieId);
+//console.log(movieId);
 
 let endpointMovie=`https://api.themoviedb.org/3/movie/${movieId}?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`
+
 
 fetch(endpointMovie)
     .then(function(response){
         return response.json();
     })
     .then(function(data){
-        console.log(data);
+        //console.log(data);
         let section = document.querySelector('.infoContainer');
         let texto = '';
         let titulo = document.querySelector('.tituloDetail');
@@ -25,7 +26,7 @@ fetch(endpointMovie)
             return response.json();
         })
         .then(function(infoTrailer){
-            console.log(infoTrailer);
+            //console.log(infoTrailer);
             let video = infoTrailer.results[0].key
             console.log(infoTrailer);
             for(let i=0; i<infoTrailer.results.length; i++){ 
@@ -71,10 +72,8 @@ fetch(endpointMovie)
                         </ul> 
 
                         <h3>SINOPSIS</h3>
-
-                        <p class="sinopsis">${data.overview}</p>        
-                        <a class="favoritos clave" href=""> 🤍 Agregar a favoritos</a>
-                        <a class="favoritos clave" href="./favourite.html"> Ver Favoritos</a>
+                        <p class="sinopsis">${data.overview}</p>   
+                        
                     </article>`
             section.innerHTML = texto
             })
@@ -88,6 +87,33 @@ fetch(endpointMovie)
 })
 
 
+let favoritos = [];
+let recuperoStorage = localStorage.getItem("favoritos");
+
+if (recuperoStorage != null){
+    favoritos= JSON.parse(recuperoStorage);
+    //console.log(favoritos);
+}
 
 
+let link= document.querySelector(".clave");
 
+if (favoritos.includes(movieId)){
+    link.innerText = "❌ Eliminar de favoritos"
+};
+
+link.addEventListener("click", function(e){
+    e.preventDefault();
+    if (favoritos.includes(movieId)){
+        let indice= favoritos.indexOf(movieId);
+        favoritos.splice(indice, 1);
+        link.innerText= "🤍 Agregar a favoritos";
+    } else {
+        favoritos.push(movieId);
+        //console.log(favoritos)
+        link.innerText= "❌ Eliminar de favoritos"
+    }
+    let moviesFavToString = JSON.stringify(favoritos);
+    localStorage.setItem("favoritos", moviesFavToString);
+    console.log(localStorage);
+})
