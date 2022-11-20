@@ -23,7 +23,7 @@ window.addEventListener('load', function (e) {
 
     formulario.addEventListener('submit', function(e){
         e.preventDefault();
-        if(campoAEvaluar.value== ""){
+        if(campoAEvaluar.value== "" /*|| campoAEvaluar.value== "null"*/){
             alerta.innerHTML += "Hey! Todavía no sé leer mentes... me ayudaría que completes el campo :)";
             //ver cómo hacer para que no aparezca muchas veces
         } else if( campoAEvaluar.value.length < 3){
@@ -89,20 +89,20 @@ window.addEventListener('load', function (e) {
 
                                 <div class="infoSearch">
                                     <a href="./genres.html">
-                                    <h3 class="h3Search">GÉNERO <i class="fa-solid fa-masks-theater"></i></h3></a>
+                                    <h3 class="h3Search">GENRE <i class="fa-solid fa-masks-theater"></i></h3></a>
                                     <a href="./detail-genres.html"><strong>Romance</strong></a>
                                 </div>
 
                                 <div class="infoSearch">
                                     <a href="./detail-movie.html">
-                                    <h3 class="h3Search">DURACIÓN <i class="fa-solid fa-clock"></i></h3>
+                                    <h3 class="h3Search">RUNNING TIME <i class="fa-solid fa-clock"></i></h3>
                                     <p>195 min</p>
                                     </a>
                                 </div>
 
                                 <div class="infoSearch">
                                     <a href="./detail-movie.html">
-                                    <h3 class="h3Search">CALIFICACIÓN <i class="fa-solid fa-star"></i></h3>
+                                    <h3 class="h3Search">QUALIFICATION <i class="fa-solid fa-star"></i></h3>
                                     <p> ${info[0].vote_average}/10</p>
                                     </a>
                                 </div>
@@ -111,7 +111,7 @@ window.addEventListener('load', function (e) {
                             <iframe class="trailerSearch" src="https://www.youtube.com/embed/${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                             <article class="favoritosSearch">
-                            <a class="botonFavorito" href="./favourite.html"> 🤍 Agregar a favoritos</a>
+                            <a class="botonFavorito" href="./favourite.html"> 🤍 Add to favourites</a>
                             </article>`;
                         
                     containerResult.innerHTML += result;

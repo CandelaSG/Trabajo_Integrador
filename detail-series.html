@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <<header class="containerHeader">
+    <header class="containerHeader">
         <article>
             <a href="./home.html"><img class="logo" src="./img/header-footer/logo.png" alt="Logo Infinity"></a>
         </article>
@@ -27,16 +27,18 @@
             <nav>
                 <ul>
                     <li class="menu"> <a href="./home.html">HOME</a></li> |
-                    <li class="menu"> <a href="./favourite.html">FAVORITOS</a></li> |
-                    <li class="menu"> <a href="./genres.html">GENEROS</a></li>
+                    <li class="menu"> <a href="./favourite.html">FAVOURITES</a></li> |
+                    <li class="menu"> <a href="./genres.html">GENRES</a></li>
                 </ul>
             </nav>
         </article>
 
         <article>
             <form action="./search-results.html" method="GET" class="buscadorContainer">
-                <input class="buscar" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..." required> 
+                <input class="buscador" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..."> <!-- required -->
+                <p class="alert"></p>
                 <a class="lupa" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
+                
             </form> 
         </article>
     </header>
@@ -53,7 +55,7 @@
                 <p>More  trailers</p>
             </article>
             <article class="artFav">
-                <a class="buttonFav clave" href=""> 🤍 Agregar a favoritos</a>
+                <a class="buttonFav clave" href=""> 🤍 Add to favourites</a>
                 <a class="buttonFav clave" href="./favourite.html"> Ver Favoritos</a>
             </article>
             

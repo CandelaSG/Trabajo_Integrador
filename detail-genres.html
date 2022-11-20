@@ -22,23 +22,25 @@
             <nav>
                 <ul>
                     <li class="menu"> <a href="./home.html">HOME</a></li> |
-                    <li class="menu"> <a href="./favourite.html">FAVORITOS</a></li> |
-                    <li class="menu"> <a href="./genres.html">GENEROS</a></li>
+                    <li class="menu"> <a href="./favourite.html">FAVOURITES</a></li> |
+                    <li class="menu"> <a href="./genres.html">GENRES</a></li>
                 </ul>
             </nav>
         </article>
 
         <article>
             <form action="./search-results.html" method="GET" class="buscadorContainer">
-                <input class="buscar" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..." required> 
+                <input class="buscador" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..."> <!-- required -->
+                <p class="alert"></p>
                 <a class="lupa" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
+                
             </form> 
         </article>
     </header>
     <main>
         <img class="sitcomImg" src="./img/genres/sitcom/sitcom.png" alt="Género Sitcom">
 
-        <h2><a href="./detail-genres.html"></a>TÍTULOS RELACIONADOS</a>  </h2>
+        <h2><a href="./detail-genres.html"></a>RELATED TITLES</a>  </h2>
         <section class="containerHome">
             <article class="pelicula">
                 <a href="./detail-series.html">

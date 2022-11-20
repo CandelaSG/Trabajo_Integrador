@@ -1,3 +1,5 @@
+/*REVISAR ESTO NO FUNCIONA*/
+
 /*api_ley= a3c55e0abc72e6abaa573f83ee40635f*/
 window.addEventListener('load', function (e) {
 endpoint = `https://api.themoviedb.org/3/genre/movie/list?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`

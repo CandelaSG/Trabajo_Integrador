@@ -62,13 +62,13 @@ fetch(endpointMovie)
                     <article class="infoDetail">
                         <ul class="listaDetail">
                             <li><strong class="decoracion">Fecha de estreno:</strong>   ${data.release_date}</li>
-                            <li><strong class="decoracion">Género:</strong> 
+                            <li><strong class="decoracion">Genre:</strong> 
                             <a href="detail-genres.html?id=${data.genres[0].id}"><strong>${genero1}</a>
                             <a href="detail-genres.html?id=${data.genres[1].id}">${genero2}</a>
                             <a href="detail-genres.html?id=${data.genres[2].id}">${genero3}</strong></a></li>
-                            <li><strong class="decoracion">Duracion:</strong>   ${data.runtime} minutos</li>
-                            <li><strong class="decoracion">Calificación:</strong>     ${data.vote_average}/10 <i class="fa-solid fa-star"></i></li> 
-                            <li><strong class="decoracion">Elenco:</strong>   Shailine Woodley, Theo James, Miles Teller, Kate Winslet, Ansel Elgort y Zoë Kravitz</li>
+                            <li><strong class="decoracion">Running time:</strong>   ${data.runtime} minutes</li>
+                            <li><strong class="decoracion">Qualification:</strong>     ${data.vote_average}/10 <i class="fa-solid fa-star"></i></li> 
+                            <li><strong class="decoracion">Cast:</strong>   Shailine Woodley, Theo James, Miles Teller, Kate Winslet, Ansel Elgort y Zoë Kravitz</li>
                             <li><strong class="decoracion"> <a href="https://www.youtube.com/embed/${video}">Otros trailers y videos</strong></a>  </li>
                         </ul> 
 
