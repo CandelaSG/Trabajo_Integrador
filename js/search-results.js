@@ -2,38 +2,48 @@ window.addEventListener('load', function (e) {
     /* QUERY STRING */
     let query = location.search; //Obtengo la QS
     let stringToObject = new URLSearchParams(query); //La trasnformo en OL
-    let aBuscar = stringToObject.get('q'); //Obtengo los datos de una propiedad con get() 
-    //console.log(aBuscar);
+    let aBuscar = stringToObject.get('busqueda'); //Obtengo los datos de una propiedad con get() 
+    console.log(aBuscar);
+    
 
     /* QUERY SELECTOR HTML */
     //P 
     let pBusqueda = document.querySelector('.resultText');
     let textoBusqueda = '';
-    //BOTON
-    let boton= document.querySelector(".boton");
-    boton.addEventListener("click",function(e){
-        if (aBuscar.length<=3){
-            e.preventDefault();
-            alerta = alert("Debes ingresar más de 3 caracteres :)")
-        } else{
-            window.open(this)
-        }
-    })
-    // CONTAINER 
+    // CONTAINER
     let containerResult = document.querySelector('.containerResults');
     let result = '';
+    
+    
+    //FORMULARIO
+    let buscador= document.querySelector(".buscar");
+    let formulario = document.querySelector("form");
+    let campoAEvaluar = document.querySelector("[name='busqueda']");
+    let alerta = document.querySelector(".alert");
 
-    /* P SOBRE LA PELÍCULA QUE BUSCASTE */
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+        if(campoAEvaluar.value== ""){
+            alerta.innerHTML += "Hey! Todavía no sé leer mentes... me ayudaría que completes el campo :)";
+            //ver cómo hacer para que no aparezca muchas veces
+        } else if( campoAEvaluar.value.length < 3){
+            alerta.innerHTML += "Por favor, ingrese más de 3 caracteres";
+
+        } else {
+            this.submit();
+        }
+        })
+        
+    //limpiar el mensaje de error cuando el usario modifique el contenido del campo input.
+    campoAEvaluar.addEventListener('input', function(e){
+            alerta.innerText = ''
+        })
+    
+
+    /* RESULTADO BÚSQUEDA */
     textoBusqueda+= `<p class="resultText"> Tu búsqueda fue: "${aBuscar}"</p>`;
     pBusqueda.innerHTML = textoBusqueda;
     
-    /* SI CAMPO ESTÁ VACÍO */
-    if(aBuscar == ""){
-        alerta = alert("Hey! Todavía no sé leer mentes... me ayudaría que completes el campo :)")
-        img = "..\img\error.jpg"//PONER BIEN LA URL
-        result += `<img src=${img} alt="img error'">`
-        containerResult.innerHTML = result
-    } else{
 
     /* URL */
     let endopointBuscar = `https://api.themoviedb.org/3/search/multi?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&query=${aBuscar}&page=1&include_adult=false`;
@@ -107,9 +117,7 @@ window.addEventListener('load', function (e) {
                     containerResult.innerHTML += result;
 
                 }).catch (function(e){
-                    console.log(e);})
-        
+                    console.log(e);}) 
         }).catch (function(e){
-            console.log(e);})}
-        
+            console.log(e);})
 })

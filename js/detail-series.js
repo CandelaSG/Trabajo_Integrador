@@ -1,3 +1,4 @@
+window.addEventListener('load', function (e) {
 let queryString = location.search; //Obtengo la QS
 let queryStringToObject = new URLSearchParams(queryString); //La trasnformo en OL
 let movieId = queryStringToObject.get('id');
@@ -106,9 +107,12 @@ link.addEventListener("click", function(e){
     } else {
         favoritosSeries.push(movieId);
         //console.log(favoritos)
-        link.innerText= "❌ Eliminar de favoritos";
+        link.innerText= "❌ Quitar de favoritos";
     }
+    
     let SeriesFavToString = JSON.stringify(favoritosSeries);
     localStorage.setItem("favoritosSeries", SeriesFavToString);
     //console.log(localStorage);
+})
+
 })

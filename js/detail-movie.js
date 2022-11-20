@@ -1,3 +1,4 @@
+window.addEventListener('load', function (e) {
 let queryString = location.search; //Obtengo la QS
 let queryStringToObject = new URLSearchParams(queryString); //La trasnformo en OL
 let movieId = queryStringToObject.get('id');
@@ -116,4 +117,6 @@ link.addEventListener("click", function(e){
     let moviesFavToString = JSON.stringify(favoritos);
     localStorage.setItem("favoritos", moviesFavToString);
     console.log(localStorage);
+})
+
 })
