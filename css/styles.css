@@ -349,6 +349,29 @@ h3 {
     width: 14vw;
 }
 
+/* GÉNEROS */
+.containerGenres{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 70px;
+}
+.genresBox {
+
+    background-color: rgb(97, 29, 60);
+    width: 6000px;
+    height: 500;
+    border-radius: 2vw;
+}
+   
+    
+   /*  width:35vw;
+    height: 4vw; */
+    
+    
+
 
 /* DETALLES GÉNEROS */
 .sitcomImg{
@@ -361,15 +384,22 @@ footer{
     background-color:#16032fa2;
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 15px;
-    align-items: center;
+    justify-content: center;
 }
 
 .imgFooter {
+    flex-direction: column;
+    align-items: center;
     width: 200px;
-    align-self: center;
+    justify-self: center; 
+}
+
+.imgApi {
+    flex-direction: row;
+    justify-self: flex-end;
+    width: 100px;
 }
 
 .nombresFooter{

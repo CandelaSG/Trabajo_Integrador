@@ -26,7 +26,7 @@ window.addEventListener('load', function (e) {
         if(campoAEvaluar.value== "" /*|| campoAEvaluar.value== "null"*/){
             alerta.innerHTML += "Hey! Todavía no sé leer mentes... me ayudaría que completes el campo :)";
             //ver cómo hacer para que no aparezca muchas veces
-        } else if( campoAEvaluar.value.length < 3){
+        } else if( campoAEvaluar.value.length < 2){
             alerta.innerHTML += "Por favor, ingrese más de 3 caracteres";
 
         } else {

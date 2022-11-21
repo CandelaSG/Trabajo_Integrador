@@ -1,33 +1,28 @@
-/*REVISAR ESTO NO FUNCIONA*/
 
-/*api_ley= a3c55e0abc72e6abaa573f83ee40635f*/
 window.addEventListener('load', function (e) {
-endpoint = `https://api.themoviedb.org/3/genre/movie/list?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`
-fetch(endpoint)
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        let container = document.querySelector(".containerHome");
-        let pGeneros = "";
-        info = data.genres
-        //console.log(info)
-        for (let i=0; i<=data.lenght; i++){
-           genero = info[i].get("name")
-           pGeneros += `<article class="pelicula">
-                            <a href="genres.html?id=${info[i].id}">
-                                <img class="poster" src=${img} alt='Poster de '${titulo}'/> </a>
+    
+    endpoint1 = `https://api.themoviedb.org/3/genre/movie/list?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`;
 
-                            <a class="nombre" href="genres.html?id=${info[i].id}">${titulo}</a>
-                            
-                            <a class="año" href="genres.html?id=${info[i].id}">${año}</a>
-                        </article>`
-            }
-            container.innerHTML = pGeneros;
-
+    fetch(endpoint1)
+        .then(function(response){
+            return response.json();
         })
+        .then(function(data){
+            /* ORGANIZO LA INFO */
+            let info = data.genres;
+            let container = document.querySelector(".containerGenres");
+            let contenido = "";
 
-    .catch(function(error){
-        console.log(error);
+            /* COMPLETO EL H2 */
+            for (let i= 0; i<=info.length; i++){
+                let titulo = info[i].name;
+                let id = info[i].id ;   
+                contenido += `<article class="genresBox">
+                                    <h2><a href="./detail-genres.html?id=${id}">${titulo}</a></h2>
+                                </article>`;
+                container.innerHTML = contenido;  
+        }
+        }).catch(function(e){
+            console.log(e);
     })
-})
+})  

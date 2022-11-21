@@ -1,4 +1,4 @@
-/*api_ley= a3c55e0abc72e6abaa573f83ee40635f*/
+/*api_ley= a3c55e0abc72e6abaa573f8/3ee40635f*/
 /*MOVIE POPULAR*/
 window.addEventListener('load', function (e) {
 let endpointpp = `https://api.themoviedb.org/3/movie/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`

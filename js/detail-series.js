@@ -61,7 +61,6 @@ fetch(endpointSerie)
                             <a href="detail-genres.html?id=${data.genres[0].id}"><strong>${genero1}</a>
                             <a href="detail-genres.html?id=${data.genres[1].id}">${genero2}</a>
                             <a href="detail-genres.html?id=${data.genres[2].id}">${genero3}</strong></a></li>
-                            <li><strong class="decoracion">Duracion:</strong>   ${data.runtime} minutos</li>
                             <li><strong class="decoracion">Calificación:</strong>     ${data.vote_average}/10 <i class="fa-solid fa-star"></i></li> 
                             <li><strong class="decoracion">Elenco:</strong>   Shailine Woodley, Theo James, Miles Teller, Kate Winslet, Ansel Elgort y Zoë Kravitz</li>
                             <li><strong class="decoracion"> <a href="https://www.youtube.com/embed/${videoSerie}">Otros trailers y videos</strong></a>  </li>
