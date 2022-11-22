@@ -13,8 +13,8 @@ fetch(endpointMovie)
     })
     .then(function(data){
         console.log(data);
-        
-        /* TÍTULO DE BÚSQUEDA */
+
+        //TÍTULO DE BÚSQUEDA
         let titulo = document.querySelector('.tituloDetail');
         let nuevoTitulo = '';
         nuevoTitulo += `${data.title}`;
@@ -26,6 +26,7 @@ fetch(endpointMovie)
         let contenedorDetail = document.querySelector('.infoContainer');
         let texto = '';
         
+        //TRAILER
         let endpointTrailer = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`;
         
         
@@ -40,7 +41,7 @@ fetch(endpointMovie)
                     let video = infoTrailer[0].key;
                     //SOURCE CUANDO HAY UN TRAILER EFECTIVAMENTE
                     for(let i=0; i<infoTrailer.length; i++){ 
-                        let pregunta = infoTrailer[i].name
+                        let pregunta = infoTrailer[i].name;
                         if (pregunta.includes("Trailer")||pregunta.includes("trailer")||pregunta.includes("teaser")||pregunta.includes("Teaser")){
                             video = infoTrailer[i].key
                         }} ;
@@ -50,22 +51,22 @@ fetch(endpointMovie)
                     if (data.poster_path != null){
                         img += `https://image.tmdb.org/t/p/original/${data.poster_path}`;    
                     } else{
-                        img += "/Users/Cande_1/Desktop/Integrador_progra/Trabajo_Integrador/img/noDisponible.png"; 
-                    }
+                        img += ".\img\errores\errorPoster.png";
+                        }
                     //DATOS MOVIE
-                    let date = data.release_date
+                    let date = data.release_date;
                     if (date == null){
                         date = "Not available :("
-                    }
-                    let runtime = data.runtime
+                    };
+                    let runtime = data.runtime;
                     if (runtime == null){
                         runtime = "Not available :("
-                    }
-                    let vote = data.vote_average + "/10"
+                    };
+                    let vote = data.vote_average + "/10";
                     if (data.vote_average == null){
                         vote = "Not available :("
-                    }
-                    let overview = data.overview
+                    };
+                    let overview = data.overview;
                     if (overview == null){
                         overview = "Not available :("
                     }
@@ -113,9 +114,8 @@ fetch(endpointMovie)
                                 <div class="buttonTrailer">
                                 <a class="verTrailer" href="https://www.youtube.com/embed/${video}"_blanc> ▶️ Ver Trailer </a> 
                                 </div>
-                            </arcticle>`;
-
-                    }else if (data.genres.length == 2){
+                            </arcticle>`;}
+                    else if (data.genres.length == 2){
                         genero1 += `'${data.genres[0].name}' `
                         genero2 += `'${data.genres[1].name}' `
                         texto += `<article class="conteinerPoster">
@@ -164,12 +164,13 @@ fetch(endpointMovie)
                                 </div>
                             </arcticle>`;
                     };
+                    
                     //CARGO DATOS AL HTML     
                     
                     contenedorDetail.innerHTML = texto;
       
-                }).catch(function(error){
-                        console.log(error);
+                }).catch(function(e){
+                        console.log(e);
                 })
 
         /* PROVIDERS */
@@ -190,13 +191,13 @@ fetch(endpointMovie)
                                         </article>`;
                         contenedorProveedores.innerHTML = proveedores;
                     }
-                }).catch(function(error){
-                    console.log(error);})
+                }).catch(function(e){
+                    console.log(e);})
         
         /* RECOMENDACIONES */
         let containerRecomendaciones = document.querySelector(".recomendaciones");
-        let contenidoRecomendaciones = ""
-        let endpointRecomendaciones = `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`
+        let contenidoRecomendaciones = "";
+        let endpointRecomendaciones = `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`;
         fetch(endpointRecomendaciones)
             .then(function(response){
                 return response.json();
@@ -209,7 +210,7 @@ fetch(endpointMovie)
                     if (info[i].poster_path != null){  
                         posterRecomendaciones += `https://image.tmdb.org/t/p/original/${info[i].poster_path}`;
                     } else{
-                        posterRecomendaciones += "/Users/Cande_1/Desktop/Integrador_progra/Trabajo_Integrador/img/noDisponible.png"; 
+                        posterRecomendaciones += "./errorPoster.png"; 
                     }
                     contenidoRecomendaciones += `
                             <article class="pelicula">
@@ -227,10 +228,10 @@ fetch(endpointMovie)
                             </article>`;
                     containerRecomendaciones.innerHTML = contenidoRecomendaciones
                         }                  
-            }).catch(function(error){
-                    console.log(error);})
-            }).catch(function(error){
-                console.log(error);
+            }).catch(function(e){
+                    console.log(e);})
+            }).catch(function(e){
+                console.log(e);
             }) 
         
 
@@ -257,11 +258,11 @@ link.addEventListener("click", function(e){
         let indice= favoritos.indexOf(movieId);
         favoritos.splice(indice, 1);
         link.innerText= "🤍 Favorites";
-        link.style.color = "white"
+        link.style.color = "white";
     } else {
         favoritos.push(movieId);
         link.innerText= "❌ Favorites";
-        link.style.color = "red"
+        link.style.color = "red";
     }
     
     //VUELVO A CARGAR LOS DATOS AL LOCAL STORAGE
