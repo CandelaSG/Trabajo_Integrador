@@ -10,6 +10,7 @@ window.addEventListener('load', function (e) {
         .then(function(data){
             /* ORGANIZO LA INFO */
             let info = data.genres;
+            console.log(data)
             let container = document.querySelector(".containerGenres");
             let contenido = "";
 
