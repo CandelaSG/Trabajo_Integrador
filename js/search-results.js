@@ -24,10 +24,10 @@ window.addEventListener('load', function (e) {
     formulario.addEventListener('submit', function(e){
         e.preventDefault();
         if(campoAEvaluar.value== "" /*|| campoAEvaluar.value== "null"*/){
-            alerta.innerHTML += "Hey! Todavía no sé leer mentes... me ayudaría que completes el campo :)";
+            alerta.innerHTML = "Hey! I still can't read minds... Please fill out the form"
             //ver cómo hacer para que no aparezca muchas veces
-        } else if( campoAEvaluar.value.length < 2){
-            alerta.innerHTML += "Por favor, ingrese más de 3 caracteres";
+        } else if( campoAEvaluar.value.length < 3){
+            alerta.innerHTML = "Please type more than 3 characters :b ";
 
         } else {
             this.submit();
@@ -41,8 +41,8 @@ window.addEventListener('load', function (e) {
     
 
     /* RESULTADO BÚSQUEDA */
-    textoBusqueda+= `<p class="resultText"> Tu búsqueda fue: "${aBuscar}"</p>`;
-    pBusqueda.innerHTML = textoBusqueda;
+    textoBusqueda= `<p class="resultText"> Tu búsqueda fue: "${aBuscar}"</p>`;
+    pBusqueda.innerHTML += textoBusqueda;
     
 
     /* URL */
@@ -89,30 +89,26 @@ window.addEventListener('load', function (e) {
 
                                 <div class="infoSearch">
                                     <a href="./genres.html">
-                                    <h3 class="h3Search">GENRE <i class="fa-solid fa-masks-theater"></i></h3></a>
+                                    <h3 class="h3Search">GENRE</h3></a>
                                     <a href="./detail-genres.html"><strong>Romance</strong></a>
                                 </div>
 
                                 <div class="infoSearch">
                                     <a href="./detail-movie.html">
-                                    <h3 class="h3Search">RUNNING TIME <i class="fa-solid fa-clock"></i></h3>
+                                    <h3 class="h3Search">RUNNING TIME</h3>
                                     <p>195 min</p>
                                     </a>
                                 </div>
 
                                 <div class="infoSearch">
                                     <a href="./detail-movie.html">
-                                    <h3 class="h3Search">QUALIFICATION <i class="fa-solid fa-star"></i></h3>
+                                    <h3 class="h3Search">QUALIFICATION</i></h3>
                                     <p> ${info[0].vote_average}/10</p>
                                     </a>
                                 </div>
                             </article>
 
-                            <iframe class="trailerSearch" src="https://www.youtube.com/embed/${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                            <article class="favoritosSearch">
-                            <a class="botonFavorito" href="./favourite.html"> 🤍 Add to favourites</a>
-                            </article>`;
+                            <iframe class="trailerSearch" src="https://www.youtube.com/embed/${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
                         
                     containerResult.innerHTML += result;
 

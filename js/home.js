@@ -7,6 +7,7 @@ fetch(endpointpp)
         return response.json();
     })
     .then(function(data){
+        console.log(data);
         let container = document.querySelector(".peliculasPopulares");
         let ppopulares = '';
         let info = data.results

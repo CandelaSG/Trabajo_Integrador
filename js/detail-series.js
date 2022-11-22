@@ -36,7 +36,7 @@ fetch(endpointSerie)
             let genero2 = '';
             let genero3 = '';
             if (data.genres.length == 0){
-                genero1 += `No hay generos disponibles `;
+                genero1 += `No genres available`;
             }else if (data.genres.length == 1){
                 genero1 += `'${data.genres[0].name}'`;
             }else if (data.genres.length == 2){
@@ -56,17 +56,15 @@ fetch(endpointSerie)
 
                     <article class="infoDetail">
                         <ul class="listaDetail">
-                            <li><strong class="decoracion">Fecha de estreno:</strong>   ${data.first_air_date}</li>
-                            <li><strong class="decoracion">Género:</strong> 
+                            <li><strong class="decoracion">Release date:</strong>   ${data.first_air_date}</li>
+                            <li><strong class="decoracion">Genres:</strong> 
                             <a href="detail-genres.html?id=${data.genres[0].id}"><strong>${genero1}</a>
                             <a href="detail-genres.html?id=${data.genres[1].id}">${genero2}</a>
                             <a href="detail-genres.html?id=${data.genres[2].id}">${genero3}</strong></a></li>
-                            <li><strong class="decoracion">Calificación:</strong>     ${data.vote_average}/10 <i class="fa-solid fa-star"></i></li> 
-                            <li><strong class="decoracion">Elenco:</strong>   Shailine Woodley, Theo James, Miles Teller, Kate Winslet, Ansel Elgort y Zoë Kravitz</li>
-                            <li><strong class="decoracion"> <a href="https://www.youtube.com/embed/${videoSerie}">Otros trailers y videos</strong></a>  </li>
+                            <li><strong class="decoracion">Qualification:</strong>     ${data.vote_average}/10 <i class="fa-solid fa-star"></i></li>  
                         </ul> 
 
-                        <h3>SINOPSIS</h3>
+                        <h3>OVERVIEW</h3>
                         <p class="sinopsis">${data.overview}</p>   
                         
                     </article>`
@@ -94,7 +92,7 @@ if (recuperoStorage != null){
 let link= document.querySelector(".clave");
 
 if (favoritosSeries.includes(movieId)){
-    link.innerText = "❌ Eliminar de favoritos";
+    link.innerText = "❌ Remove from favorites";
 };
 
 link.addEventListener("click", function(e){
@@ -102,11 +100,11 @@ link.addEventListener("click", function(e){
     if (favoritosSeries.includes(movieId)){
         let indice = favoritosSeries.indexOf(movieId);
         favoritosSeries.splice(indice, 1);
-        link.innerText= "🤍 Agregar a favoritos";
+        link.innerText= "🤍 Add to favorites";
     } else {
         favoritosSeries.push(movieId);
         //console.log(favoritos)
-        link.innerText= "❌ Quitar de favoritos";
+        link.innerText= "❌ Remove from favorites";
     }
     
     let SeriesFavToString = JSON.stringify(favoritosSeries);
