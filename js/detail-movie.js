@@ -197,7 +197,6 @@ fetch(endpointMovie)
         let containerRecomendaciones = document.querySelector(".recomendaciones");
         let contenidoRecomendaciones = ""
         let endpointRecomendaciones = `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`
-
         fetch(endpointRecomendaciones)
             .then(function(response){
                 return response.json();
@@ -226,13 +225,15 @@ fetch(endpointMovie)
                                 ${info[i].release_date.slice(0,4)}
                                 </a>
                             </article>`;
-                containerRecomendaciones.innerHTML = contenidoRecomendaciones;
-                }
+                    containerRecomendaciones.innerHTML = contenidoRecomendaciones
+                        }                  
             }).catch(function(error){
                     console.log(error);})
             }).catch(function(error){
                 console.log(error);
             }) 
+        
+
 
 
 /* FAVORITOS */
