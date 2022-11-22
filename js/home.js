@@ -1,6 +1,8 @@
 /*api_ley= a3c55e0abc72e6abaa573f8/3ee40635f*/
 /*MOVIE POPULAR*/
 window.addEventListener('load', function (e) {
+    console.log("'Todos los recursos terminaron de cargar!");
+    document.getElementById("loader").classList.toggle("loader2");
 let endpointpp = `https://api.themoviedb.org/3/movie/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`
 fetch(endpointpp)
     .then(function(response){

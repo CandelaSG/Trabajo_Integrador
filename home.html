@@ -15,8 +15,15 @@
     <title>INFINITY</title>
     <link rel="icon" type="image/x-icon" href="./img/header-footer/infinity.png">
     </head>
+     <!--UIkit CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.14/dist/css/uikit.min.css" />
     
-    <body>
+    <body class = "hidden">
+        <div class="loader" id="loader">
+            <div class="loadingio-spinner-ellipsis-o8lv1lj72eg"><div class="ldio-vp8tjwpo0g">
+                <div></div><div></div><div></div><div></div><div></div>
+                </div></div>
+        </div>
     <header class="containerHeader">
         <article>
             <a href="./home.html"><img class="logo" src="./img/header-footer/logo.png" alt="Logo Infinity"></a>
@@ -45,12 +52,43 @@
     <main>
     <!-- TRAILER -->
     <section class="estrenoContainer">
-        <marquee behavior="scroll"  scrolldelay="150" direction="right" scrollamount="30" >
+        <marquee behavior="scroll"  scrolldelay="150" direction="left" scrollamount="30" >
             <img class="premiere" src="./img/home/estreno/premiereTitle.png" alt="premiere">
         </marquee>
-        <a href="https://youtu.be/FgmnKsED-jU">
+        <!-- <a href="https://youtu.be/FgmnKsED-jU">
             <img class="imgEstreno" src="./img/home/estreno/disenchanted.png" alt="Poster 'Disencharted'">
-       </a>
+       </a> -->
+       <div class="uk-container slider-area">
+        <div uk-slider>
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000">
+                <ul class="listado-series-populares uk-slider-items uk-child-width-1@s uk-child-width-1@m">
+        
+                    <li>
+                        <img src="./img/home/estreno/disenchanted.png" alt="">
+                        <div class = "uk-position-center uk-panel"></div>
+                    </li>
+                    <li>
+                        <img src="./img/home/estreno/loveRosie.png" alt="">
+                        <div class = "uk-position-center uk-panel"></div>
+                    </li>
+                    <li>
+                        <img src="./img/home/estreno/prideAndPrejudice.png" alt="">
+                        <div class = "uk-position-center uk-panel"></div>
+                    </li>
+                    <li>
+                        <img src="./img/home/estreno/theParentTrap.png" alt="">
+                        <div class = "uk-position-center uk-panel"></div>
+                    </li>
+        
+                </ul>
+                <a href="#" class="uk-position-center-left uk-position-small uk-hidden-hover" uk-slidenav-previous uk-slider-item = "previous"></a>
+        
+                <a href="#" class="uk-position-center-right uk-position-small uk-hidden-hover" uk-slidenav-next uk-slider-item = "next"></a>
+                </div>
+
+        </div>
+       </div>
+       
     </section>
 
     <!-- POSTERS -->
@@ -78,6 +116,9 @@
             <img class = "imgApi" src="./img/TMBD-removebg-preview.png" alt="TMDB">
 
     </footer>
+     <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.14/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.14/dist/js/uikit-icons.min.js"></script> 
     <script src="./js/home.js"></script>
     <script src="./js/search-results.js"></script>
 
