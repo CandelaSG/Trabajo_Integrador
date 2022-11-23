@@ -43,9 +43,8 @@
 
         <article>
             <form action="./search-results.html" method="GET" class="buscadorContainer">
-                <input id="buscar2" class="buscar buscador" placeholder="Search movies, series..." type="text">
-                <button id="btn" class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <div id="panel" class = "panel"></div>
+                <input class="buscador" type="text" name="busqueda" value="" placeholder="  Search movies, series..." >
+                <button type="submit" value="enviar" class="lupa" href="search-results.html"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </article>
     </header>
@@ -53,23 +52,32 @@
     
 
     <main>
-        <h1 class="tituloFav">YOUR FAVORITES 💜</h1>
-        <h2>MOVIES 🎥</h2>
+        <h1 class="tituloFav tituloHome">YOUR FAVORITES 💜</h1>
+        <h2 class="tituloHome">MOVIES 🎥</h2>
         <section class="containerFav favoritos">
  
         </section> 
-        <h2>SERIES 🍿</h2>
+        <h2 class="tituloHome">SERIES 🍿</h2>
         <section class="containerFav favSeries">
 
         </section>
 
     </main> 
-    <footer>
-        <a class="fraseFooter" href="./home.html">
-            <img class="imgFooter" src="./img/header-footer/footer.png" alt="To infinity and beyond">
-        </a>
-        <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
-    </footer>  
+    <footer class="containerFooter">
+        <div>
+            <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
+        </div>
+        <div>
+            <a class="fraseFooter" href="./home.html">
+                <img class="imgFooter" src="./img/header-footer/footer.png" alt="To infinity and beyond">
+            </a>
+        </div>
+        
+        <div>
+            <img class = "imgApi" src="./img/TMBD-removebg-preview.png" alt="TMDB">
+        </div>
+            
+    </footer> 
     <script src="./js/favourite.js"></script>  
     
 </body>

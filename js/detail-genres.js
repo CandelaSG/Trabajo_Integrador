@@ -2,6 +2,24 @@ window.addEventListener('load', function (e) {
     /* LOADER */
     console.log("'Todos los recursos terminaron de cargar!");
     document.getElementById("loader").classList.toggle("loader2");
+    
+    /* BUSCADOR */
+    let formulario = document.querySelector("form");
+    let campoAEvaluar = document.querySelector("[name='busqueda']");
+    let alerta = document.querySelector(".alert");
+
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+        let alerta = ""
+        if(campoAEvaluar.value== ""){
+            alerta = alert("Hey! We still can't read minds... Please fill out the form")
+        } else if( campoAEvaluar.value.length < 3){
+            alerta = alert("Please type more than 3 characters :b ");
+
+        } else {
+            this.submit();
+        }
+        })
 
     let queryString = location.search;
     let queryStringToObject = new URLSearchParams(queryString);
@@ -49,7 +67,7 @@ window.addEventListener('load', function (e) {
     let contenedorSerie = document.querySelector(".genreSeries");
     let contenidoSerie = "";
 
-    //SECCIÓN PELÍCULAS 
+    //SECCIÓN SERIES 
     fetch(endpointSerie)
         .then(function(response){
             return response.json();

@@ -2,10 +2,13 @@
 *{
     box-sizing: border-box;
 }
-a{
+
+a:link, a:visited, a:active{
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
+
 body{
     background-color: #22014d;
     background-image: url(./imgCss/background.png);
@@ -14,12 +17,6 @@ body{
     margin: 0;
     font-family:Arial, Helvetica, sans-serif;
 }
-h2{
-    margin-left: 1.5vw;
-    color: aliceblue;
-    font-family: 'Outfit';
-    font-size: 2vw;
-}
 
 h1{
     margin-left: 3vw;
@@ -27,6 +24,14 @@ h1{
     font-family:"Outfit";
     font-weight: bolder;
 }
+
+h2{
+    margin-left: 1.5vw;
+    color: aliceblue;
+    font-family: 'Outfit';
+    font-size: 2vw;
+}
+
 
 h3 {
     font-family: "Outfit";
@@ -51,39 +56,67 @@ h3 {
 
 /* LOGO */
 .logo{
-    height: 5vw;
+    height: 7vh;
 }
 
 /* MENÚ BÚSQUEDA */
+
 .menu{
     display: inline;
     text-decoration: none;
-    color: white;
+    align-items: center;
 }
 
 /* BUSCADOR */
-.searchContainer{
+.buscadorContainer{
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+
 }
   
-.buscar{
-    width: 165px;
-    height: 25px;
-    margin: 0 50px;
-    padding: 0 20px;
-    font-size: 15px;
+.buscador{
+    width: 15vw;
+    height: 3.5vh;
+    margin-right:0.5vw;
+    padding-right:20px;
+    font-size: 13px;
     color: #000;
     outline: none;
-    border: 1px solid #01444d;
+    border: 1px solid #22014d;
     border-radius: 30px;
+    position: relative;
+    top:0.8vw;
+}
+.lupa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0.5vw;
+    right: 2v;
+    width: 3vw;
+    height: 5vh;
+    color:white;
+    background-color: transparent;
+    border-radius: 50%;
+    
+    
 }
 .containerMenu{
-    margin-left: 8.5vw;
+    margin-left: 10vw;
 }
 
 /* HOME */
 /* IMAGEN ESTRENO */
+.tituloHome{
+    margin-left: 1.5vw;
+    color: aliceblue;
+    font-family: 'Outfit';
+    font-size: 2vw;
+    font-weight: bold;
+}
 .premiere{
     width: 100vw;
     margin-top: 0;
@@ -116,22 +149,18 @@ h3 {
     justify-content: center;
     padding-left:0.5vw;
     padding-right: 0.5vw;
+    width: 13vw;
 }
 
 .poster{
     height: 34vh;
     width: 13vw;
-    /* transition: 0.4s ease-in-out; */
 }
-
-/* .poster:hover{
-    width: 15vw;
-    height: 36vh;
-} */
 
 .nombre{
     display: block;
     text-align: center;
+    color: white;
 }
 
 .año{
@@ -145,6 +174,10 @@ h3 {
 .tituloDetail{
     text-align: center;
     text-shadow: 0px 2px 15px rgb(173, 124, 180);
+    margin-left: 1.5vw;
+    color: aliceblue;
+    font-family: 'Outfit';
+    font-weight: bold;
 
 }
 
@@ -197,7 +230,7 @@ h3 {
     height: 3vw;
 }
 .artFav{
-    margin-left: 4vw;
+    margin-left: 2.7vw;
 }
 .buttonFav{
     background-color: black;
@@ -217,8 +250,8 @@ h3 {
     width: 65vw;
     margin-left: 17.5vw;
     padding: 1.5vw;
-    margin-top: 2vw;
-    margin-bottom: 5vh;
+    margin-top: 1vw;
+    margin-bottom: 1vh;
 
 }
 .imgProv{
@@ -243,10 +276,33 @@ h3 {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    margin-bottom: 11vw;
+    margin-bottom: 15vw;
     height: 25vh;
     width: 100vw;
     justify-content:space-around;
+}
+.botonRecSeries{
+    background-color:rgba(0, 0, 0, 0.252);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 1vw;
+    border: 1px solid #d0d0d0;
+    margin: 1vw;
+}
+.containerButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botonRec{
+    background-color:rgba(0, 0, 0, 0.252);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 1vw;
+    border: 1px solid #d0d0d0;
+    margin: 1vw;
 }
 /* FAVORITOS */
 .tituloFav{
@@ -270,7 +326,10 @@ h3 {
     padding-right: 1.5vw;
     width: 16vw;
 }
-
+.imgError{
+    width: 25vw;
+    height: 15vw;
+}
 /* SEARCH RESULTS */
 
 .resultText{
@@ -280,66 +339,22 @@ h3 {
     color: white;
     width: 560px;
     font-family: "Outfit";
+    margin-top: 2vw;
 }
 
 .containerResults{
-    background-color: #1b051e5f;
-    width: 63vw;
-    height: 35vw;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
-    margin: 0 18.5vw 0 18.5vw;
+    margin:0 10vw 4vw 10vw;
+    justify-content:space-around;
 }
-
-.imgSearch{
-    height: 400vw;
-}
-
-.peliSearch{
-    display: flex;
-    flex-direction: column;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
-
-.tituloSearch{
-    color: white;
-    font-size: 25px;
+.peliculaSearch{
+    justify-content: center;
     text-align: center;
+    margin: 0.5vw;
+    width: 15vw;
 }
-
-.infoBox{
-    display: flex;
-    flex-direction: row;
-}
-
-.infoSearch{
-    margin-right: 1vw;
-    background-color: rgba(0, 0, 0, 0.36);
-    color: white;
-    width: 9vw;
-    text-align: center;
-}
-
-.imgSearch{
-    /* margin-top: 1vw;
-    margin-bottom: 1vw; */
-    width:20vw; 
-    height:25vw;
-}
-
-.favoritosSearch{
-    align-items: center;
-    height: 6vh;
-    width: 13vw;
-    background-color: black;
-    padding: 14px;
-    border-radius: 15px;
-    justify-content: center; 
-}
-
-
 
 /*PÁGINAS RELACIONADAS*/
 .relacionadasContainer{
@@ -379,28 +394,22 @@ h3 {
     font-size: 1.5vw;
     border-radius: 2vw;
 }
-   
-    
-   /*  width:35vw;
-    height: 4vw; */
-    
-    
 
-
-/* DETALLES GÉNEROS */
-.sitcomImg{
-    width: 100vw;
+.titleGenre{
+    margin-top: 3vw;
+    margin-left: 2vw;
 }
 
-
 /* FOOTER */
-footer{
+.containerFooter{
     background-color:#16032fa2;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around;
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 15px;
-    justify-content: center;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
 }
 
 .imgFooter {
@@ -413,7 +422,7 @@ footer{
 .imgApi {
     flex-direction: row;
     justify-self: flex-end;
-    width: 100px;
+    width: 5vw;
 }
 
 .nombresFooter{
@@ -421,10 +430,6 @@ footer{
     font-size: 10px;
 }
 
-a{
-    text-decoration: none;
-    color: white;
-}
 
 /* LOADER */
 *{
@@ -494,7 +499,7 @@ a{
 }
 .ldio-vp8tjwpo0g div { box-sizing: content-box; }
 
-/*LO MIO*/
+
 .loader {
     background-color: #000000; 
     width: 100%;
@@ -503,7 +508,7 @@ a{
     justify-content: center;
     align-items: center;  
     position: fixed;
-    top: 0;   /*PARA QUE QUEDE FIJO*/
+    top: 0; 
     left: 0;
     z-index: 100000;
     clip-path: circle(141.4% at 100% 0);
@@ -598,7 +603,6 @@ a{
         height: 40vw;
         margin: 0 13vw 0 13vw;
     }
-
 
     .peliSearch{
         margin-left: 3vw;

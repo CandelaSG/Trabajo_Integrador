@@ -2,6 +2,24 @@ window.addEventListener('load', function (e) {
     /* LOADER */
     console.log("'Todos los recursos terminaron de cargar!");
     document.getElementById("loader").classList.toggle("loader2");
+    
+    /* BUSCADOR */
+    let formulario = document.querySelector("form");
+    let campoAEvaluar = document.querySelector("[name='busqueda']");
+    let alerta = document.querySelector(".alert");
+
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+        let alerta = ""
+        if(campoAEvaluar.value== ""){
+            alerta = alert("Hey! We still can't read minds... Please fill out the form")
+        } else if( campoAEvaluar.value.length < 3){
+            alerta = alert("Please type more than 3 characters :b ");
+
+        } else {
+            this.submit();
+        }
+        })
 let queryString = location.search; 
 let queryStringToObject = new URLSearchParams(queryString);
 let movieId = queryStringToObject.get('id');
@@ -50,7 +68,7 @@ fetch(endpointMovie)
                     if (data.poster_path != null){
                         img += `https://image.tmdb.org/t/p/original/${data.poster_path}`;    
                     } else{
-                        img += ".\img\errores\errorPoster.png";
+                        img += "../img/errores/errorPoster.png";
                         }
                     //DATOS MOVIE
                     let date = data.release_date;
@@ -194,9 +212,12 @@ fetch(endpointMovie)
                     console.log(e);})
         
         /* RECOMENDACIONES */
+        // Endpoint
+        let endpointRecomendaciones = `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`;
+        
         let containerRecomendaciones = document.querySelector(".recomendaciones");
         let contenidoRecomendaciones = "";
-        let endpointRecomendaciones = `https://api.themoviedb.org/3/movie/${movieId}/recommendations?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`;
+
         fetch(endpointRecomendaciones)
             .then(function(response){
                 return response.json();
@@ -225,13 +246,34 @@ fetch(endpointMovie)
                                 ${info[i].release_date.slice(0,4)}
                                 </a>
                             </article>`;
-                    containerRecomendaciones.innerHTML = contenidoRecomendaciones
-                        }                  
+                               
+                        let button= document.querySelector(".botonRec");
+                        button.addEventListener("click", function(){
+                            if(button.innerText == "Discover related titles"){
+                                this.innerText= "Hide titles";
+                                containerRecomendaciones.innerHTML = contenidoRecomendaciones;
+
+                            } else {
+                                this.innerText= "Discover related titles";
+                                containerRecomendaciones.innerHTML = ""; 
+                                
+                                
+                            }
+                            
+                        })
+                    }       
             }).catch(function(e){
                     console.log(e);})
             }).catch(function(e){
                 console.log(e);
             }) 
+
+
+        
+
+        
+        
+        
         
 
 

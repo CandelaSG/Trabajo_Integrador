@@ -8,8 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   
     <!-- LINK EMOTICON-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <script src="./js/detail-genres.js"></script>
 
     <title>GENRE</title>
     <link rel="icon" type="image/x-icon" href="./img/header-footer/infinity.png">
@@ -38,30 +41,39 @@
 
         <article>
             <form action="./search-results.html" method="GET" class="buscadorContainer">
-                <input id="buscar2" class="buscar buscador" placeholder="Search movies, series..." type="text">
-                <button id="btn" class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <div id="panel" class = "panel"></div>
+                <input class="buscador" type="text" name="busqueda" value="" placeholder="  Search movies, series..." >
+                <button type="submit" value="enviar" class="lupa" href="search-results.html"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </article>
+        
     </header>
     <main>
-        <h2>MOVIES 🎥</h2>
-        <section class="containerFav genreMovies">
+        <p class="alert"></p>
+        <h2 class="titleGenre">MOVIES 🎥</h2>
+        <section class="containerHome genreMovies">
         </section>
  
-        <h2>SERIES 🍿</h2>
-        <section class="containerFav genreSeries">
+        <h2 class="titleGenre">SERIES 🍿</h2>
+        <section class="containerHome genreSeries">
         </section>
 
 
     </main>
 
-    <footer>
-        <a class="fraseFooter" href="./home.html">
-            <img class="imgFooter" src="./img/header-footer/footer.png" alt="To infinity and beyond">
-        </a>
-        <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
+    <footer class="containerFooter">
+        <div>
+            <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
+        </div>
+        <div>
+            <a class="fraseFooter" href="./home.html">
+                <img class="imgFooter" src="./img/header-footer/footer.png" alt="To infinity and beyond">
+            </a>
+        </div>
+        
+        <div>
+            <img class = "imgApi" src="./img/TMBD-removebg-preview.png" alt="TMDB">
+        </div>
+            
     </footer>
-    <script src="./js/detail-genres.js"></script>
 </body>
 </html>

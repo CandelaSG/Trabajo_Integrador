@@ -41,22 +41,18 @@
 
         <article>
             <form action="./search-results.html" method="GET" class="buscadorContainer">
-                <input id="buscar2" class="buscar buscador" placeholder="Search movies, series..." type="text">
-                <button id="btn" class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <div id="panel" class = "panel"></div>
+                <input class="buscador" type="text" name="busqueda" value="" placeholder="  Search movies, series..." >
+                <button type="submit" value="enviar" class="lupa" href="search-results.html"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </article>
     </header>
-    <!-- MAIN -->
+
     <main>
-    <!-- TRAILER -->
     <section class="estrenoContainer">
         <marquee behavior="scroll"  scrolldelay="150" direction="left" scrollamount="30" >
             <img class="premiere" src="./img/home/estreno/premiereTitle.png" alt="premiere">
         </marquee>
-        <!-- <a href="https://youtu.be/FgmnKsED-jU">
-            <img class="imgEstreno" src="./img/home/estreno/disenchanted.png" alt="Poster 'Disencharted'">
-       </a> -->
+
        <div class="uk-container slider-area">
         <div uk-slider>
             <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="autoplay: true; autoplay-interval: 3000">
@@ -91,15 +87,15 @@
     </section>
 
     <!-- POSTERS -->
-    <h2>POPULAR MOVIES</h2>
+    <h2 class="tituloHome">POPULAR MOVIES</h2>
         <section class="containerHome peliculasPopulares">
         </section>
     
-    <h2>POPULAR SERIES</h2>
+    <h2 class="tituloHome">POPULAR SERIES</h2>
         <section class="containerHome seriesPopulares">
         </section>
       
-    <h2>TOP RATED MOVIES</h2>
+    <h2 class="tituloHome">TOP RATED MOVIES</h2>
         <section class="containerHome peliculasValoradas">
         </section>
     
@@ -107,13 +103,20 @@
 
     <!-- FOOTER -->
 
-    <footer>
+    <footer class="containerFooter">
+        <div>
+            <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
+        </div>
+        <div>
             <a class="fraseFooter" href="./home.html">
                 <img class="imgFooter" src="./img/header-footer/footer.png" alt="To infinity and beyond">
             </a>
-            <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
+        </div>
+        
+        <div>
             <img class = "imgApi" src="./img/TMBD-removebg-preview.png" alt="TMDB">
-
+        </div>
+            
     </footer>
      <!-- UIkit JS -->
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.14/dist/js/uikit.min.js"></script>
