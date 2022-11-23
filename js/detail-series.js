@@ -1,8 +1,7 @@
 window.addEventListener('load', function (e) {
-let queryString = location.search; //Obtengo la QS
-let queryStringToObject = new URLSearchParams(queryString); //La trasnformo en OL
+let queryString = location.search;
+let queryStringToObject = new URLSearchParams(queryString);
 let serieId = queryStringToObject.get('id');
-//console.log(serieId);
 
 let endpointSerie=`https://api.themoviedb.org/3/tv/${serieId}?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`;
 
@@ -16,7 +15,7 @@ fetch(endpointSerie)
         //TÍTULO DE BÚSQUEDA
         let titulo = document.querySelector('.detailSeries');
         let tituloSerie = '';
-        tituloSerie += `${data.title}`;
+        tituloSerie += `${data.name}`;
         titulo.innerHTML=tituloSerie;
         
         //QUERY SELECTOR
@@ -31,15 +30,18 @@ fetch(endpointSerie)
                 return response.json();
             })
             .then(function(dataTrailer){
-                console.log("Info Trailer")
                 console.log(dataTrailer);
                 infoTrailer = dataTrailer.results;
-                let videoSerie = dataTrailer.id;
+                if (!infoTrailer.includes("key")){
+                    console.log("No hay trailer");
+                }
+                let videoSerie = infoTrailer[0].key;
                 //SOURCE CUANDO HAY UN TRAILER EFECTIVAMENTE
                 for(let i=0; i<infoTrailer.length; i++){ 
-                    let pregunta = infoTrailer[i].title;
+                    let pregunta = infoTrailer[i].name;
                     if (pregunta.includes("Trailer")||pregunta.includes("trailer")||pregunta.includes("teaser")||pregunta.includes("Teaser")){
-                        videoSerie = dataTrailer.id;
+                        videoSerie = infoTrailer[i].key;
+                        break
                     }};
                 
                 //POSTER
@@ -47,9 +49,9 @@ fetch(endpointSerie)
                     if (data.poster_path != null){
                         img += `https://image.tmdb.org/t/p/original/${data.poster_path}`;    
                     } else{
-                        img += ".\img\errores\errorPoster.png"; 
+                        img += "./img/errores/errorPoster.png"; 
                     }
-                //DATOS MOVIE
+                //DATOS SERIE
                 let date = data.first_air_date;
                 if (date == null){
                     date = "Not available :("
@@ -66,19 +68,6 @@ fetch(endpointSerie)
                 let genero1 = '';
                 let genero2 = '';
                 let genero3 = '';
-                
-                if (data.genres.length == 0){
-                    genero1 += `No genres available`;
-                }else if (data.genres.length == 1){
-                    genero1 += `'${data.genres[0].name}'`;
-                }else if (data.genres.length == 2){
-                    genero1 += `'${data.genres[0].name}' `;
-                    genero2 += `'${data.genres[1].name}' `;
-                }else{
-                    genero1 += `'${data.genres[0].name}' `;
-                    genero2 += `'${data.genres[1].name}' `;
-                    genero3 += `'${data.genres[2].name}'`;
-                    };
                 
                 if (data.genres.length == 0){
                     genero1 += "No genres available"
@@ -143,7 +132,7 @@ fetch(endpointSerie)
                     genero1 += `'${data.genres[0].name}' `
                     genero2 += `'${data.genres[1].name}' `
                     genero3 += `'${data.genres[2].name}'`
-                    texto += `<article class="conteinerPoster">
+                    textoSerie += `<article class="conteinerPoster">
                             <img class="posterDetail" src=${img} alt='Poster of '${tituloSerie}'>
                             
                             </article>
@@ -165,15 +154,15 @@ fetch(endpointSerie)
                         </arcticle>`;
                 };
                 
-                //CARGO DATOS AL HTML     
+                /* CARGO DATOS AL HTML*/ 
                     
-                section.innerHTML = texto;
+                section.innerHTML = textoSerie;
       
             }).catch(function(e){
                     console.log(e);
             })
 
-        
+
         /* PROVIDERS */
         let endpointProveedoresSeries = `https://api.themoviedb.org/3/watch/providers/tv?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`;
         let contenedorProveedoresSeries = document.querySelector(".providers");

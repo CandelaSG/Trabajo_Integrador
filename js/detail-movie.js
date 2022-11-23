@@ -1,11 +1,9 @@
 window.addEventListener('load', function (e) {
-let queryString = location.search; //Obtengo la QS
-let queryStringToObject = new URLSearchParams(queryString); //La trasnformo en OL
+let queryString = location.search; 
+let queryStringToObject = new URLSearchParams(queryString);
 let movieId = queryStringToObject.get('id');
-//console.log(movieId);
 
 let endpointMovie=`https://api.themoviedb.org/3/movie/${movieId}?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`;
-
 
 fetch(endpointMovie)
     .then(function(response){
@@ -19,8 +17,6 @@ fetch(endpointMovie)
         let nuevoTitulo = '';
         nuevoTitulo += `${data.title}`;
         titulo.innerHTML= nuevoTitulo;
-        
-        /* DETAIL MOVIE */
 
         //QUERY SELECTOR
         let contenedorDetail = document.querySelector('.infoContainer');
@@ -43,7 +39,7 @@ fetch(endpointMovie)
                     for(let i=0; i<infoTrailer.length; i++){ 
                         let pregunta = infoTrailer[i].name;
                         if (pregunta.includes("Trailer")||pregunta.includes("trailer")||pregunta.includes("teaser")||pregunta.includes("Teaser")){
-                            video = infoTrailer[i].key
+                            video = infoTrailer[i].key;
                         }} ;
 
                     //POSTER

@@ -13,7 +13,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     
-    <title>GÉNEROS</title>
+    <script src="./js/genres.js"></script>
+
+    <title>GENRES</title>
     <link rel="icon" type="image/x-icon" href="./img/header-footer/infinity.png">
 </head>
 
@@ -36,7 +38,7 @@
 
         <article>
             <form action="./search-results.html" method="GET" class="buscadorContainer">
-                <input class="buscador" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ..."> <!-- required -->
+                <input class="buscador" type="text" name="busqueda" value="" placeholder = "Pelicula, serie ...">
                 <p class="alert"></p>
                 <a class="lupa" href="./search-results.html"><i class="fa-solid fa-magnifying-glass"></i> </a>
                 
@@ -44,141 +46,11 @@
         </article>
     </header>
     <main>
-            <section class="containerGenres">
+        <h1 class="tituloFav">GENRES</h1>
+        <section class="containerGenres">
             
-            </section>
-    
-
-
-
-<!--        
-    
-                <article class="pelicula">
-                    <a href="./detail-movie.html">
-                        <img class="poster" src="./img/genres/terror/labruja.jpg" alt="Poster de La Bruja">
-                    </a>
-                    <a class="nombre" href="./detail-movie.html">La Bruja</a>
-                    <a class="año" href="./detail-movie.html">2015</a>
-                </article>
-    
-                <article class="pelicula">
-                    <a href="./detail-movie.html">
-                        <img class="poster" src="./img/genres/terror/norespires.jpg" alt="Poster de No Respires">
-                    </a>
-                    <a class="nombre" href="./detail-movie.html">No Respires</a>
-                    <a class="año" href="./detail-movie.html">2016</a>
-                </article>
-    
-                <article class="pelicula">
-                    <a href="./detail-movie.html">
-                        <img class="poster" src="./img/genres/terror/chucky.jpg" alt="Poster de The Chucky">
-                    </a>
-                    <a class="nombre" href="./detail-movie.html">The Chucky: Child's play 2</a>
-                    <a class="año" href="./detail-movie.html">1990</a>
-                </article>
-                <article class="pelicula">
-                    <a href="./detail-movie.html">
-                        <img class="poster" src="./img/genres/terror/anabelle.jpg" alt="Poster de Anabelle">
-                    </a>
-                    <a class="nombre" href="./detail-movie.html">Anabelle</a>
-                    <a class="año" href="./detail-movie.html">2014</a>
-                </article>
-    
-                <article class="pelicula">
-                    <a href="./detail-genres.html">
-                        <img class="posterVerMas" src="./img/ver-mas/VerMasTerror.png">
-                    </a>
-                </article>
-        </section>
         
-        <h2><a href="./detail-genres.html"></a></h2>
-        <section class="containerHome pelicula">
         </section>
-        
-        <h2><a href="./detail-genres.html"></a></h2>
-        <section class="containerHome pelicula">
-        </section>
-        
-        <h2><a href="./detail-genres.html"></a></h2>
-        <section class="containerHome pelicula">
-        </section>
-        
-        <h2><a href="./detail-genres.html"></a></h2>
-        <section class="containerHome pelicula">
-        </section>
-
-        <h2><a href="./detail-genres.html"></a></h2>
-        <section class="containerHome pelicula">
-        </section>
-
-        <h2><a href="./detail-genres.html"></a></h2>
-        <section class="containerHome pelicula">
-        </section>
-        
-        <h2><a href="./detail-genres.html"></a></h2>
-        <section class="containerHome pelicula">
-        </section>
-
-        <h2><a href="./detail-genres.html"></a></h2>
-        <section class="containerHome pelicula">
-        </section>
-        
-        <h2><a href="./detail-genres.html"></a></h2>
-        <section class="containerHome pelicula">
-        </section>
-
-        <h2><a href="./detail-genres.html"></a></h2> -->
-    
-    
-    
-    
-        
-<!--        <section class="containerHome">
-            <article class="pelicula">
-                <a href="./detail-movie.html">
-                    <img class="poster" src="./img/genres/terror/it.jpg" alt="Poster de IT">
-                </a>
-                <a class="nombre" href="./detail-movie.html">IT</a>
-                <a class="año" href="./detail-movie.html">2017</a>
-            </article>
-
-            <article class="pelicula">
-                <a href="./detail-movie.html">
-                    <img class="poster" src="./img/genres/terror/labruja.jpg" alt="Poster de La Bruja">
-                </a>
-                <a class="nombre" href="./detail-movie.html">La Bruja</a>
-                <a class="año" href="./detail-movie.html">2015</a>
-            </article>
-
-            <article class="pelicula">
-                <a href="./detail-movie.html">
-                    <img class="poster" src="./img/genres/terror/norespires.jpg" alt="Poster de No Respires">
-                </a>
-                <a class="nombre" href="./detail-movie.html">No Respires</a>
-                <a class="año" href="./detail-movie.html">2016</a>
-            </article>
-
-            <article class="pelicula">
-                <a href="./detail-movie.html">
-                    <img class="poster" src="./img/genres/terror/chucky.jpg" alt="Poster de The Chucky">
-                </a>
-                <a class="nombre" href="./detail-movie.html">The Chucky: Child's play 2</a>
-                <a class="año" href="./detail-movie.html">1990</a>
-            </article>
-            <article class="pelicula">
-                <a href="./detail-movie.html">
-                    <img class="poster" src="./img/genres/terror/anabelle.jpg" alt="Poster de Anabelle">
-                </a>
-                <a class="nombre" href="./detail-movie.html">Anabelle</a>
-                <a class="año" href="./detail-movie.html">2014</a>
-            </article>
-
-            <article class="pelicula">
-                <a href="./detail-genres.html">
-                    <img class="posterVerMas" src="./img/ver-mas/VerMasTerror.png">
-                </a>
-            </article> -->
-
     </main>
 
     <footer>
@@ -187,7 +59,7 @@
         </a>
         <p class="nombresFooter">CANDELA - ROSARIO - BELÉN </p>
     </footer>
-    <script src="./js/genres.js"></script>
+    
  
 </body>
 </html>

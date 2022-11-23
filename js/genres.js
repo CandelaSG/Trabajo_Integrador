@@ -10,19 +10,20 @@ window.addEventListener('load', function (e) {
         .then(function(data){
             /* ORGANIZO LA INFO */
             let info = data.genres;
-            console.log(data)
+            console.log(info)
             let container = document.querySelector(".containerGenres");
-            let contenido = "";
+            let contenido = '';
 
-            /* COMPLETO EL H2 */
-            for (let i= 0; i<=info.length; i++){
+            for (let i= 0; i<info.length; i++){
                 let titulo = info[i].name;
-                let id = info[i].id ;   
+                let id = info[i].id;   
                 contenido += `<article class="genresBox">
-                                    <h2><a href="./detail-genres.html?id=${id}">${titulo}</a></h2>
-                                </article>`;
-                container.innerHTML = contenido;  
+                                <a href="./detail-genres.html?idGenero=${id}">
+                                    ${titulo}
+                                </a>
+                            </article>`;  
         }
+        container.innerHTML = contenido;
         }).catch(function(e){
             console.log(e);
     })
