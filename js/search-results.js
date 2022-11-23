@@ -1,4 +1,7 @@
 window.addEventListener('load', function (e) {    
+    /* LOADER */
+    console.log("'Todos los recursos terminaron de cargar!");
+    document.getElementById("loader").classList.toggle("loader2");
     /* QUERY STRING */
     let query = location.search; //Obtengo la QS
     let stringToObject = new URLSearchParams(query); //La trasnformo en OL

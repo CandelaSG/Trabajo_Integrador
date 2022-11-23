@@ -1,6 +1,8 @@
 
 window.addEventListener('load', function (e) {
-    
+    /* LOADER */
+    console.log("'Todos los recursos terminaron de cargar!");
+    document.getElementById("loader").classList.toggle("loader2");
     endpoint1 = `https://api.themoviedb.org/3/genre/movie/list?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`;
 
     fetch(endpoint1)

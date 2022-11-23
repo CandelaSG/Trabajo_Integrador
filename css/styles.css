@@ -72,34 +72,14 @@ h3 {
     height: 25px;
     margin: 0 50px;
     padding: 0 20px;
-    font-size: 13px;
+    font-size: 15px;
     color: #000;
     outline: none;
-    border: 1px solid #22014d;
+    border: 1px solid #01444d;
     border-radius: 30px;
-    /* transition: width 0.5s ease-in-out; */
 }
 .containerMenu{
     margin-left: 8.5vw;
-}
-/* .buscar:hover {
-    width: 200px;
-} */
-
-.lupa{
-    position: fixed;
-    top: 32px;
-    right: 10px;
-    cursor: pointer;
-    width: 3vw;
-    height: 5vh;
-    background-color: #75376e;
-    color:white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
 }
 
 /* HOME */
@@ -527,7 +507,7 @@ a{
     left: 0;
     z-index: 100000;
     clip-path: circle(141.4% at 100% 0);
-    transition: clip-path 0.5s ease-in-out;
+    transition: clip-path 0.8s ease-in-out;
 }
 
 .loader2 {
