@@ -20,7 +20,9 @@ window.addEventListener('load', function (e) {
             this.submit();
         }
         })
-    let queryString = location.search; //Obtengo la QS
+    
+    
+        let queryString = location.search; //Obtengo la QS
     let queryStringToObject = new URLSearchParams(queryString); //La trasnformo en OL
     let movieId = queryStringToObject.get('id');
 
@@ -38,7 +40,9 @@ window.addEventListener('load', function (e) {
 
 
     if (seleccionados == null || seleccionados.length == 0){
-        seccionFav.innerHTML = `<img class="imgError" src="./img/errores/addMovie.png">` 
+        seccionFav.innerHTML = `<article class="containerImgError">
+                                    <img class="imgError" src="./img/errores/addMovie.png">
+                                </article>` 
     } else {
         for (let i= 0; i<seleccionados.length; i++){
             buscarYMostrarFavoritospeli(seleccionados[i])
@@ -86,7 +90,9 @@ window.addEventListener('load', function (e) {
 
 
     if (seleccionadosSeries == null || seleccionadosSeries.length == 0){
-    seccionFavSeries.innerHTML = `<img class="imgError" src="./img/errores/addSerie.png">`
+    seccionFavSeries.innerHTML = `<article class="containerImgError">
+                                    <img class="imgError" src="./img/errores/addSerie.png">
+                                </article>` 
     } else {
     for (let i= 0; i<seleccionadosSeries.length; i++){
         buscarYMostrarFavoritos(seleccionadosSeries[i])
@@ -122,5 +128,4 @@ window.addEventListener('load', function (e) {
             console.log(e);
         })
     }
-
 })

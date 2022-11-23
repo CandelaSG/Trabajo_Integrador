@@ -6,7 +6,6 @@ window.addEventListener('load', function (e) {
     /* BUSCADOR */
     let formulario = document.querySelector("form");
     let campoAEvaluar = document.querySelector("[name='busqueda']");
-    let alerta = document.querySelector(".alert");
 
     formulario.addEventListener('submit', function(e){
         e.preventDefault();
@@ -120,7 +119,7 @@ window.addEventListener('load', function (e) {
                                 <ul class="listaDetail">
                                     <li><strong class="decoracion">First air date:</strong>   ${date}</li>
                                     <li><strong class="decoracion">Genres: </strong>
-                                    <strong><a href="detail-genres.html?id=${data.genres[0].id}">${genero1}</strong></a></li>
+                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[0].id}">${genero1}</strong></a></li>
                                     <li><strong class="decoracion">Qualification:</strong>     ${vote} <i class="fa-solid fa-star"></i></li> 
                                 </ul> 
                                 <p class="sinopsis">${overview}</p>   
@@ -140,8 +139,8 @@ window.addEventListener('load', function (e) {
                                 <ul class="listaDetail">
                                     <li><strong class="decoracion">First air date:</strong>   ${date}</li>
                                     <li><strong class="decoracion">Genres: </strong>
-                                    <strong><a href="detail-genres.html?id=${data.genres[0].id}">${genero1}</strong></a>
-                                    <strong><a href="detail-genres.html?id=${data.genres[1].id}">${genero2}</strong></a></li>
+                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[0].id}">${genero1}</strong></a>
+                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[1].id}">${genero2}</strong></a></li>
                                     <li><strong class="decoracion">Qualification:</strong>     ${vote} <i class="fa-solid fa-star"></i></li> 
                                 </ul> 
 
@@ -163,9 +162,9 @@ window.addEventListener('load', function (e) {
                                 <ul class="listaDetail">
                                     <li><strong class="decoracion">First air date:</strong>   ${date}</li>
                                     <li><strong class="decoracion">Genres: </strong>
-                                    <strong><a href="detail-genres.html?id=${data.genres[0].id}">${genero1}</strong></a>
-                                    <strong><a href="detail-genres.html?id=${data.genres[1].id}">${genero2}</strong></a>
-                                    <strong><a href="detail-genres.html?id=${data.genres[2].id}">${genero3}</strong></a></li>
+                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[0].id}">${genero1}</strong></a>
+                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[1].id}">${genero2}</strong></a>
+                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[2].id}">${genero3}</strong></a></li>
                                     <li><strong class="decoracion">Qualification:</strong>     ${vote} <i class="fa-solid fa-star"></i></li> 
                                 </ul> 
 
@@ -232,15 +231,15 @@ window.addEventListener('load', function (e) {
                         }
                         contenidoRecomendaciones += `
                                 <article class="pelicula">
-                                    <a href="detail-movie.html?id=${info[i].id}">
+                                    <a href="detail-series.html?id=${info[i].id}">
                                         <img class="poster posterEvento" src='${posterRecomendaciones}' alt='Poster de '${nombreRecomendaciones}'>
                                     </a>
 
-                                    <a class="nombre" href="detail-movie.html?id=${info[i].id}">
+                                    <a class="nombre" href="detail-series.html?id=${info[i].id}">
                                     ${nombreRecomendaciones}
                                     </a>
 
-                                    <a class="año" href="detail-movie.html?id=${info[i].id}">
+                                    <a class="año" href="detail-series.html?id=${info[i].id}">
                                     ${info[i].release_date.slice(0,4)}
                                     </a>
                                 </article>`;
@@ -267,6 +266,8 @@ window.addEventListener('load', function (e) {
 
     /* FAVORITOS */
 
+    //SERIES
+
     //CAPTURO DATOS DEL LOCAL STORAGE     
     let favoritosSeries = [];
     let recuperoStorage = localStorage.getItem("favoritosSeries");
@@ -279,10 +280,6 @@ window.addEventListener('load', function (e) {
 
     //CAPTURO BOTON FAVORITOS
     let link= document.querySelector(".clave");
-
-    if (favoritosSeries.includes(serieId)){
-        link.innerText = "❌ Remove from favorites";
-    };
 
     //EVENTO BOTON FAVORITOS
     link.addEventListener("click", function(e){

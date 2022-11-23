@@ -3,10 +3,11 @@
     box-sizing: border-box;
 }
 
-a:link, a:visited, a:active{
+a:link, a:visited, a:active:hover{
     text-decoration: none;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 
 body{
@@ -319,6 +320,19 @@ h3 {
     height: 25vh;
     width: 100vw;
     justify-content:flex-start;
+    position:relative;
+}
+
+.containerImgError{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content:center;
+    align-self: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .peliFav{
     justify-content: center;
@@ -341,12 +355,28 @@ h3 {
     font-family: "Outfit";
     margin-top: 2vw;
 }
+.tituloResult{
+    margin-left: 0vw;
+    color: aliceblue;
+    font-family: 'Outfit';
+    font-size: 2vw;
+    font-weight: bold;
+    background-color:rgba(0, 0, 0, 0.252) ;
+    padding: 1vw 1vw 1vw 2vw;
+    
+}
 
-.containerResults{
+.resultMovies{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin:0 10vw 4vw 10vw;
+    justify-content:space-around;
+}
+
+.resultSeries{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content:space-around;
 }
 
@@ -381,15 +411,23 @@ h3 {
 }
 
 /* GÉNEROS */
-.containerGenres{    
+.containerGenresMovies{    
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 8vh;
-    margin-bottom: 8vh;
-    
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+.containerGenresSeries{    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 .genresBox{
     background-color:rgba(0, 0, 0, 0.297);
@@ -399,6 +437,7 @@ h3 {
     text-align: center;
     font-size: 1.5vw;
     border-radius: 2vw;
+    /* box-shadow: 0px 2px 15px rgb(173, 124, 180); */
 }
 
 .titleGenre{
@@ -518,7 +557,7 @@ h3 {
     left: 0;
     z-index: 100000;
     clip-path: circle(141.4% at 100% 0);
-    transition: clip-path 0.8s ease-in-out;
+    transition: clip-path 0.7s ease-in-out;
 }
 
 .loader2 {
