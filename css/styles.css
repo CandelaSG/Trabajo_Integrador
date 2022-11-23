@@ -349,6 +349,7 @@ h3 {
     margin:0 10vw 4vw 10vw;
     justify-content:space-around;
 }
+
 .peliculaSearch{
     justify-content: center;
     text-align: center;
@@ -356,6 +357,11 @@ h3 {
     width: 15vw;
 }
 
+.errorSearch{
+    width: 50vw;
+    height: 30vw;
+    margin: 4vw;
+}
 /*PÁGINAS RELACIONADAS*/
 .relacionadasContainer{
     display: flex;

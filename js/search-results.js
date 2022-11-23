@@ -39,7 +39,6 @@ window.addEventListener('load', function (e) {
         }
         })
         
-    //limpiar el mensaje de error cuando el usario modifique el contenido del campo input.
     campoAEvaluar.addEventListener('input', function(e){
             alerta.innerText = ''
         })
@@ -51,9 +50,7 @@ window.addEventListener('load', function (e) {
             return response.json();
         })
         .then(function(data){
-            if (data.results.length==0){
-                containerResult.innerHTML += `<img class="error" src="../img/errores/errorSearch.png" alt="">`
-            }else{
+            if (data.results.length!==0){
                 for (let i= 0; i<data.results.length; i++){
                     let info = data.results
                     let titulo = info[i].title
@@ -72,6 +69,10 @@ window.addEventListener('load', function (e) {
                                 </article>`;
                         }
                         containerResult.innerHTML = result;
+                
+                
+            }else{
+                containerResult.innerHTML =  `<img class="errorSearch" src="./img/errores/errorSearch.png">`
                 }
                 
             
