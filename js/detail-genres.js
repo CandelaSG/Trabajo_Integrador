@@ -21,7 +21,7 @@ window.addEventListener('load', function (e) {
         })
         .then(function(data){
             let info = data.results;
-            for (let i= 0; i<=6; i++){
+            for (let i= 0; i<6; i++){
                 let titulo = info[i].title;
                 let img = `https://image.tmdb.org/t/p/original/${info[i].poster_path}`
                 contenidoMovie += `<article class="pelicula">
@@ -41,22 +41,24 @@ window.addEventListener('load', function (e) {
         })
     
     
+
     //ENDPOINT
+    let endpointSerie = `https://api.themoviedb.org/3/discover/tv?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&sort_by=popularity.desc&page=1&with_genres=${genreId}&with_watch_monetization_types=flatrate&with_status=0&with_type=0`;
+    
+    //QUERY SELECTOR
     let contenedorSerie = document.querySelector(".genreSeries");
-    let contenidoSerie = "";  
-    //SECCIÓN SERIES
-    let endpointSerie = `https://api.themoviedb.org/3/discover/tv?api_key=a3c55e0abc72e6abaa573f83ee40635f&sort_by=popularity.desc&page=1&with_genres=${genreId}&with_watch_monetization_types=free&with_status=0&with_type=0`;
+    let contenidoSerie = "";
+
+    //SECCIÓN PELÍCULAS 
     fetch(endpointSerie)
         .then(function(response){
             return response.json();
         })
         .then(function(data){
-            console.log(data)
-            info = data.results;
-            for (let i= 0; i<=info.length; i++){
+            let info = data.results;
+            for (let i= 0; i<info.lenght; i++){
                 let tituloSerie = info[i].name;
-                console.log(tituloSerie)
-                let imgSerie = `https://image.tmdb.org/t/p/original/${info[i].poster_path}`;
+                let imgSerie = `https://image.tmdb.org/t/p/original/${info[i].poster_path}`
                 contenidoSerie += `<article class="pelicula">
                                     <a href="detail-movie.html?id=${info[i].id}">
                                         <img class="poster posterEvento" src=${imgSerie} alt='Poster de '${tituloSerie}'>
@@ -71,12 +73,10 @@ window.addEventListener('load', function (e) {
             
         }).catch(function(e){
             console.log(e);
-
-
-
+        })
 
 })
-})
+
 
 
 
