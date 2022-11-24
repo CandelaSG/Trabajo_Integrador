@@ -13,7 +13,7 @@ window.addEventListener('load', function (e) {
         let alerta = ""
         if(campoAEvaluar.value== ""){
             alerta = alert("Hey! We still can't read minds... Please fill out the form")
-        } else if( campoAEvaluar.value.length < 3){
+        } else if( campoAEvaluar.value.length <= 3){
             alerta = alert("Please type more than 3 characters :b ");
 
         } else {
@@ -51,7 +51,6 @@ window.addEventListener('load', function (e) {
             return response.json();
         })
         .then(function(data){
-            console.log(data);
             if (data.results.length !== 0){
                 for (let i= 0; i<12; i++){
                     let info = data.results;
@@ -69,7 +68,7 @@ window.addEventListener('load', function (e) {
                         }
                         resultMovies.innerHTML = result;
             }else{
-                resultMovies.innerHTML =  `<img class="errorSearch" src="./img/errores/errorSearch.png">`;
+                resultMovies.innerHTML =  `<img class="errorSearch" src="./img/errores/errorSearchMovie.png">`;
                 }
             
         }).catch (function(e){
@@ -106,7 +105,7 @@ window.addEventListener('load', function (e) {
                         }
                     resultSeries.innerHTML = resultSer;
             }else{
-                resultSeries.innerHTML =  `<img class="errorSearch" src="./img/errores/errorSearch.png">`;
+                resultSeries.innerHTML =  `<img class="errorSearch" src="./img/errores/errorSearchSerie.png">`;
                 }
             
         }).catch (function(e){
@@ -122,7 +121,6 @@ window.addEventListener('load', function (e) {
     //TRANSFORMO DATOS DEL LOCAL STORAGE PARA MANIPULARLOS EN JS
     if (recuperoStorage != null){
         favoritos= JSON.parse(recuperoStorage);
-        //console.log(favoritos);
         }
 
     //CAPTURO BOTON FAVORITOS
@@ -172,7 +170,6 @@ window.addEventListener('load', function (e) {
             linkSerie.style.color = "white";
         } else {
             favoritosSeries.push(serieId);
-            //console.log(favoritos)
             linkSerie.innerText= "❌ Favorites";
             linkSerie.style.color = "red";
 
@@ -181,7 +178,6 @@ window.addEventListener('load', function (e) {
         //VUELVO A CARGAR LOS DATOS AL LOCAL STORAGE
         let SeriesFavToString = JSON.stringify(favoritosSeries);
         localStorage.setItem("favoritosSeries", SeriesFavToString);
-        //console.log(localStorage);
         })
 
 

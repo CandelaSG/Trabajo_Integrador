@@ -15,21 +15,20 @@ window.addEventListener('load', function (e){
         let alerta = ""
         if(campoAEvaluar.value== ""){
             alerta = alert("Hey! We still can't read minds... Please fill out the form")
-        } else if( campoAEvaluar.value.length < 3){
+        } else if( campoAEvaluar.value.length <= 3){
             alerta = alert("Please type more than 3 characters :b ");
 
         } else {
             this.submit();
         }
         })
-
+    // ENDPOINT
     let endpointpp = `https://api.themoviedb.org/3/movie/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`
     fetch(endpointpp)
         .then(function(response){
             return response.json();
         })
         .then(function(data){
-            console.log(data);
             let container = document.querySelector(".peliculasPopulares");
             let ppopulares = '';
             let info = data.results
@@ -61,13 +60,13 @@ window.addEventListener('load', function (e){
 
 
     /*SERIES POPULAR*/
+    // ENDPOINT
     let endpointsp = `https://api.themoviedb.org/3/tv/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`
     fetch(endpointsp)
         .then(function(response){
             return response.json();
         })
         .then(function(data){
-            //console.log(data);
             let container = document.querySelector(".seriesPopulares");
             let spopulares = '';
             let info = data.results
@@ -92,13 +91,13 @@ window.addEventListener('load', function (e){
 
 
     /*PELÍCULAS MÁS VALORADAS*/
+    // ENDPOINT
     let endpointpv = `https://api.themoviedb.org/3/movie/top_rated?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`
     fetch(endpointpv)
         .then(function(response){
             return response.json();
         })
         .then(function(data){
-            console.log(data);
             let container = document.querySelector(".peliculasValoradas");
             let pValoradas = '';
             let info = data.results

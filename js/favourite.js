@@ -13,7 +13,7 @@ window.addEventListener('load', function (e) {
         let alerta = ""
         if(campoAEvaluar.value== ""){
             alerta = alert("Hey! We still can't read minds... Please fill out the form")
-        } else if( campoAEvaluar.value.length < 3){
+        } else if( campoAEvaluar.value.length <= 3){
             alerta = alert("Please type more than 3 characters :b ");
 
         } else {
@@ -29,11 +29,7 @@ window.addEventListener('load', function (e) {
     /* LISTA DE FAVORITOS */
     /* PELICULAS */
     let recuperoStorage= localStorage.getItem("favoritos");
-
-    //console.log(recuperoStorage);
-
     let seleccionados = JSON.parse(recuperoStorage);
-    console.log(seleccionados);
 
 
     let seccionFav = document.querySelector (".favoritos");
@@ -51,7 +47,6 @@ window.addEventListener('load', function (e) {
 
     function buscarYMostrarFavoritospeli (movieId){
     let endpointMovie=`https://api.themoviedb.org/3/movie/${movieId}?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`
-    console.log(endpointMovie)
     fetch (endpointMovie)
         .then(function(response){
             return response.json();
@@ -81,10 +76,7 @@ window.addEventListener('load', function (e) {
 
     /* SERIES */
     let recuperoS= localStorage.getItem("favoritosSeries");
-    //console.log(recuperoStorage);
-
     let seleccionadosSeries = JSON.parse(recuperoS);
-    //console.log(seleccionados);
 
     let seccionFavSeries = document.querySelector (".favSeries");
 
@@ -107,7 +99,6 @@ window.addEventListener('load', function (e) {
             return response.json();
         })
         .then(function(info){
-            console.log(info);
             let año = info.first_air_date.slice(0,4)
             let img = `https://image.tmdb.org/t/p/original/${info.poster_path}`
             seccionFavSeries.innerHTML += `<article class="pelicula peliFav">

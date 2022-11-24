@@ -13,7 +13,7 @@ window.addEventListener('load', function (e) {
         let alerta = ""
         if(campoAEvaluar.value== ""){
             alerta = alert("Hey! We still can't read minds... Please fill out the form")
-        } else if( campoAEvaluar.value.length < 3){
+        } else if( campoAEvaluar.value.length <= 3){
             alerta = alert("Please type more than 3 characters :b ");
 
         } else {
@@ -31,8 +31,6 @@ window.addEventListener('load', function (e) {
             return response.json();
         })
         .then(function(data){
-            console.log(data);
-
             //TÍTULO DE BÚSQUEDA
             let titulo = document.querySelector('.tituloDetail');
             let nuevoTitulo = '';
@@ -52,7 +50,6 @@ window.addEventListener('load', function (e) {
                         return response.json();
                     })
                     .then(function(dataTrailer){
-                        //console.log(infoTrailer);
                         infoTrailer = dataTrailer.results;
                         //SOURCE POR DEFAULT
                         let video = infoTrailer[0].key;
@@ -198,7 +195,6 @@ window.addEventListener('load', function (e) {
                     .then(function(response){
                         return response.json();
                     }).then(function(dataProveedores){
-                        console.log(dataProveedores);
                         let info = dataProveedores.results;
                         for (let i=0; i<=5; i++){
                             let posterProvider = `https://image.tmdb.org/t/p/original/${info[i].logo_path}`;
@@ -222,7 +218,6 @@ window.addEventListener('load', function (e) {
                 .then(function(response){
                     return response.json();
                 }).then(function(dataRecomendaciones){
-                    console.log(dataRecomendaciones);
                     let info = dataRecomendaciones.results;
                     for (let i=0; i<=6; i++){
                         let posterRecomendaciones = '';
@@ -277,7 +272,6 @@ window.addEventListener('load', function (e) {
     //TRANSFORMO DATOS DEL LOCAL STORAGE PARA MANIPULARLOS EN JS
     if (recuperoStorage != null){
         favoritos= JSON.parse(recuperoStorage);
-        //console.log(favoritos);
         }
 
     //CAPTURO BOTON FAVORITOS

@@ -12,7 +12,7 @@ window.addEventListener('load', function (e) {
         let alerta = ""
         if(campoAEvaluar.value== ""){
             alerta = alert("Hey! We still can't read minds... Please fill out the form")
-        } else if( campoAEvaluar.value.length < 3){
+        } else if( campoAEvaluar.value.length <= 3){
             alerta = alert("Please type more than 3 characters :b ");
 
         } else {
@@ -24,6 +24,7 @@ window.addEventListener('load', function (e) {
     let queryStringToObject = new URLSearchParams(queryString);
     let serieId = queryStringToObject.get('id');
 
+    // ENDPOINT SERIE
     let endpointSerie=`https://api.themoviedb.org/3/tv/${serieId}?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`;
 
     fetch(endpointSerie)
@@ -31,15 +32,13 @@ window.addEventListener('load', function (e) {
             return response.json();
         })
         .then(function(data){
-            console.log(data);
-
             //TÍTULO DE BÚSQUEDA
             let titulo = document.querySelector('.detailSeries');
             let tituloSerie = '';
             tituloSerie += `${data.name}`;
             titulo.innerHTML=tituloSerie;
             
-            //QUERY SELECTOR
+            //SECCION SERIES
             let section = document.querySelector('.infoSeries');
             let textoSerie = '';
 
@@ -51,7 +50,6 @@ window.addEventListener('load', function (e) {
                     return response.json();
                 })
                 .then(function(dataTrailer){
-                    console.log(dataTrailer);
                     infoTrailer = dataTrailer.results;
                     if (!infoTrailer.includes("key")){
                         console.log("No hay trailer");
@@ -119,7 +117,7 @@ window.addEventListener('load', function (e) {
                                 <ul class="listaDetail">
                                     <li><strong class="decoracion">First air date:</strong>   ${date}</li>
                                     <li><strong class="decoracion">Genres: </strong>
-                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[0].id}">${genero1}</strong></a></li>
+                                    <strong><a href="detail-genres-ser.html?genreIdSer=${data.genres[0].id}">${genero1}</strong></a></li>
                                     <li><strong class="decoracion">Qualification:</strong>     ${vote} <i class="fa-solid fa-star"></i></li> 
                                 </ul> 
                                 <p class="sinopsis">${overview}</p>   
@@ -139,8 +137,8 @@ window.addEventListener('load', function (e) {
                                 <ul class="listaDetail">
                                     <li><strong class="decoracion">First air date:</strong>   ${date}</li>
                                     <li><strong class="decoracion">Genres: </strong>
-                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[0].id}">${genero1}</strong></a>
-                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[1].id}">${genero2}</strong></a></li>
+                                    <strong><a href="detail-genres-ser.html?genreIdSer=${data.genres[0].id}">${genero1}</strong></a>
+                                    <strong><a href="detail-genres-ser.html?genreIdSer=${data.genres[1].id}">${genero2}</strong></a></li>
                                     <li><strong class="decoracion">Qualification:</strong>     ${vote} <i class="fa-solid fa-star"></i></li> 
                                 </ul> 
 
@@ -162,9 +160,9 @@ window.addEventListener('load', function (e) {
                                 <ul class="listaDetail">
                                     <li><strong class="decoracion">First air date:</strong>   ${date}</li>
                                     <li><strong class="decoracion">Genres: </strong>
-                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[0].id}">${genero1}</strong></a>
-                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[1].id}">${genero2}</strong></a>
-                                    <strong><a href="detail-genres.html?genreIdSer=${data.genres[2].id}">${genero3}</strong></a></li>
+                                    <strong><a href="detail-genres-ser.html?genreIdSer=${data.genres[0].id}">${genero1}</strong></a>
+                                    <strong><a href="detail-genres-ser.html?genreIdSer=${data.genres[1].id}">${genero2}</strong></a>
+                                    <strong><a href="detail-genres-ser.html?genreIdSer=${data.genres[2].id}">${genero3}</strong></a></li>
                                     <li><strong class="decoracion">Qualification:</strong>     ${vote} <i class="fa-solid fa-star"></i></li> 
                                 </ul> 
 
@@ -192,7 +190,6 @@ window.addEventListener('load', function (e) {
                     .then(function(response){
                         return response.json();
                     }).then(function(dataProveedoresSeries){
-                        //console.log(dataProveedoresSeries);
                         let info = dataProveedoresSeries.results;
                         for (let i=0; i<=5; i++){
                             let posterProvider = `https://image.tmdb.org/t/p/original/${info[i].logo_path}`;
@@ -207,20 +204,17 @@ window.addEventListener('load', function (e) {
             
                     
             /* RECOMENDACIONES */
-            // Endpoint
+            // ENDPOINT
             let endpointRecomendaciones = `https://api.themoviedb.org/3/tv/${serieId}?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`;
 
-            let containerRecomendaciones = document.querySelector(".recomendacionesSeries");
-            let contenidoRecomendaciones = "";
-            
+            let containerRecom = document.querySelector(".recomendacionesSeries");
+            let contenidoRecom = "";
             
             fetch(endpointRecomendaciones)
                 .then(function(response){
                     return response.json();
                 }).then(function(dataRecomendaciones){
-        
                     let info = dataRecomendaciones;
-                    console.log(info)
                     for (let i=0; i<=6; i++){
                         let posterRecomendaciones = '';
                         let nombreRecomendaciones = info[i].name;
@@ -229,31 +223,30 @@ window.addEventListener('load', function (e) {
                         } else{
                             posterRecomendaciones += "./errorPoster.png"; 
                         }
-                        contenidoRecomendaciones += `
-                                <article class="pelicula">
-                                    <a href="detail-series.html?id=${info[i].id}">
-                                        <img class="poster posterEvento" src='${posterRecomendaciones}' alt='Poster de '${nombreRecomendaciones}'>
-                                    </a>
+                    contenidoRecom += `
+                            <article class="pelicula">
+                                <a href="detail-series.html?id=${info[i].id}">
+                                    <img class="poster posterEvento" src='${posterRecomendaciones}' alt='Poster de '${nombreRecomendaciones}'>
+                                </a>
 
-                                    <a class="nombre" href="detail-series.html?id=${info[i].id}">
-                                    ${nombreRecomendaciones}
-                                    </a>
+                                <a class="nombre" href="detail-series.html?id=${info[i].id}">
+                                ${nombreRecomendaciones}
+                                </a>
 
-                                    <a class="año" href="detail-series.html?id=${info[i].id}">
-                                    ${info[i].release_date.slice(0,4)}
-                                    </a>
-                                </article>`;
-                        
-                            let buttonSeries= document.querySelector(".botonRecSeries");
-                            buttonSeries.addEventListener("click", function(){
-                                if(buttonSeries.innerText == "Discover related titles"){
-                                    this.innerText= "Hide titles";
-                                    containerRecomendaciones.innerHTML = contenidoRecomendaciones;
+                                <a class="año" href="detail-series.html?id=${info[i].id}">
+                                ${info[i].release_date.slice(0,4)}
+                                </a>
+                            </article>`;
+                        let buttonSeries= document.querySelector(".botonRecSeries");
+                        buttonSeries.addEventListener("click", function(){
+                            if(buttonSeries.innerText == "Discover related titles"){
+                                this.innerText= "Hide titles";
+                                containerRecom.innerHTML = contenidoRecom;
 
-                                } else {
-                                    this.innerText= "Discover related titles";
-                                    containerRecomendaciones.innerHTML = "";
-                                }
+                            } else {
+                                this.innerText= "Discover related titles";
+                                containerRecom.innerHTML = "";
+                            }
 
                             })
                         }                  
@@ -275,7 +268,6 @@ window.addEventListener('load', function (e) {
     //TRANSFORMO DATOS DEL LOCAL STORAGE PARA MANIPULARLOS EN JS
     if (recuperoStorage != null){
         favoritosSeries= JSON.parse(recuperoStorage);
-        //console.log(favoritos);
     }
 
     //CAPTURO BOTON FAVORITOS
@@ -291,7 +283,6 @@ window.addEventListener('load', function (e) {
             link.style.color = "white";
         } else {
             favoritosSeries.push(serieId);
-            //console.log(favoritos)
             link.innerText= "❌ Favorites";
             link.style.color = "red";
 
@@ -300,7 +291,6 @@ window.addEventListener('load', function (e) {
         //VUELVO A CARGAR LOS DATOS AL LOCAL STORAGE
         let SeriesFavToString = JSON.stringify(favoritosSeries);
         localStorage.setItem("favoritosSeries", SeriesFavToString);
-        //console.log(localStorage);
         })
     })
 })

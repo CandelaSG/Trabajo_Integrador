@@ -112,6 +112,7 @@ h3 {
 /* HOME */
 /* IMAGEN ESTRENO */
 .tituloHome{
+    margin-top: 1.7vw;
     margin-left: 1.5vw;
     color: aliceblue;
     font-family: 'Outfit';
@@ -138,7 +139,7 @@ h3 {
 /* PELICULAS Y SERIES */
 .containerHome{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
     margin-bottom: 11vw;
     height: 25vh;
@@ -175,13 +176,23 @@ h3 {
 .tituloDetail{
     text-align: center;
     text-shadow: 0px 2px 15px rgb(173, 124, 180);
+    margin-top: 1vw;
     margin-left: 1.5vw;
     color: aliceblue;
     font-family: 'Outfit';
     font-weight: bold;
 
 }
-
+.genreSeries{
+    height: 90vh;
+    width: 85vw;
+    margin-left: 8vw;
+}
+.genreMovies{
+    height: 90vh;
+    width: 85vw;
+    margin-left: 8vw;
+}
 .infoContainer{
     display: flex;
     align-items: center; 
@@ -437,11 +448,11 @@ h3 {
     text-align: center;
     font-size: 1.5vw;
     border-radius: 2vw;
-    /* box-shadow: 0px 2px 15px rgb(173, 124, 180); */
+    
 }
 
 .titleGenre{
-    margin-top: 3vw;
+    margin-top: 0.5vw;
     margin-left: 2vw;
 }
 
@@ -543,7 +554,6 @@ h3 {
   transform-origin: 0 0; /* see note above */
 }
 .ldio-vp8tjwpo0g div { box-sizing: content-box; }
-
 
 .loader {
     background-color: #000000; 
@@ -673,5 +683,23 @@ h3 {
 
     .favoritosSearch{
         display: none;
+    }
+}
+@media (hover: hover){
+    .pelicula:hover{
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
+    }
+    .genresBox:hover {
+        color: white;
+        box-shadow: 0px 2px 15px rgb(173, 124, 180);
+    }
+    .botonRecSeries:hover {
+        background-color: rgba(100, 100, 100, 0.521);
+        box-shadow: 0px 2px 15px rgb(173, 124, 180);
+    }
+    .botonRec:hover {
+        background-color: rgba(100, 100, 100, 0.521);
+        box-shadow: 0px 2px 15px rgb(173, 124, 180);
     }
 }

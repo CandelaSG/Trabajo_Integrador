@@ -13,7 +13,7 @@ window.addEventListener('load', function (e) {
         let alerta = ""
         if(campoAEvaluar.value== ""){
             alerta = alert("Hey! We still can't read minds... Please fill out the form")
-        } else if( campoAEvaluar.value.length < 3){
+        } else if( campoAEvaluar.value.length <= 3){
             alerta = alert("Please type more than 3 characters :b ");
 
         } else {
@@ -30,25 +30,20 @@ window.addEventListener('load', function (e) {
             return response.json();
         })
         .then(function(data){
-            /* ORGANIZO LA INFO */
             let info = data.genres;
-            console.log(info)
-            
-
             for (let i= 0; i<16; i++){
                 let titulo = info[i].name;
                 let id = info[i].id;   
-                contenidoMovies += `<article class="genresBox">
-                                <a href="./detail-genres.html?idGeneroMov=${id}">
-                                    ${titulo}
-                                </a>
-                            </article>`;  
+                contenidoMovies += `<a href="./detail-genres.html?idGeneroMov=${id}">
+                                        <article class="genresBox">
+                                            ${titulo}
+                                        </article>
+                                    </a>`;  
         }
         containerMovies.innerHTML = contenidoMovies;
+        
         }).catch(function(e){
-            console.log(e);
-    })
-
+            console.log(e);})
 
     /* SERIE GENRES */
     let endpointSeries = `https://api.themoviedb.org/3/genre/tv/list?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`;
@@ -63,11 +58,11 @@ window.addEventListener('load', function (e) {
             for (let i= 0; i<16; i++){
                 let tituloSerie = infoSeries[i].name;
                 let idSerie = infoSeries[i].id;   
-                contenidoSeries += `<article class="genresBox">
-                                <a href="./detail-genres.html?idGeneroSer=${idSerie}">
-                                    ${tituloSerie}
-                                </a>
-                            </article>`;  
+                contenidoSeries += `<a href="./detail-genres-ser.html?idGeneroSer=${idSerie}">
+                                        <article class="genresBox">
+                                            ${tituloSerie}
+                                        </article>
+                                    </a>`;  
         }
         containerSeries.innerHTML = contenidoSeries;
         }).catch(function(e){

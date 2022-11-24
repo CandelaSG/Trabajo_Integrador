@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- LINK CSS-->
     <link rel="stylesheet" href="./css/styles.css">
-
-    <!-- LINK FONTS-->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-
-    <!-- LINK ICONOS-->
+   
+    <!-- LINK EMOTICON-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    <title>SEARCH RESULT</title>
+    <script src="./js/detail-genres.js"></script>
+
+    <title>GENRE</title>
     <link rel="icon" type="image/x-icon" href="./img/header-footer/infinity.png">
 </head>
+
 <body>
     <div class="loader" id="loader">
         <div class="loadingio-spinner-ellipsis-o8lv1lj72eg"><div class="ldio-vp8tjwpo0g">
@@ -27,11 +25,10 @@
             </div></div>
     </div>
     <header class="containerHeader">
-        <!-- LOGO-->
         <article>
             <a href="./home.html"><img class="logo" src="./img/header-footer/logo.png" alt="Logo Infinity"></a>
         </article>
-        <!--MENU NAVEGACIÓN-->
+        
         <article class="containerMenu">
             <nav>
                 <ul>
@@ -42,25 +39,21 @@
             </nav>
         </article>
 
-        <!-- BUSCADOR -->
         <article>
             <form action="./search-results.html" method="GET" class="buscadorContainer">
                 <input class="buscador" type="text" name="busqueda" value="" placeholder="  Search movies, series..." >
                 <button type="submit" value="enviar" class="lupa" href="search-results.html"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
         </article>
+
     </header>
-
     <main>
-        <p class="resultText"></p>
-
-        <h2 class="tituloResult">RELATED MOVIE TITLES</h2>
-        <section class="resultMovies">
+        <p class="alert"></p>
+ 
+        <h2 class="titleGenre">SERIES 🍿</h2>
+        <section class="containerHome genreSeries">
         </section>
 
-        <h2 class="tituloResult">RELATED SERIE TITLES</h2>
-        <section class="resultSeries">
-        </section>
 
     </main>
 
@@ -79,7 +72,5 @@
         </div>
             
     </footer>
-    <script src="./js/search-results.js"></script>
 </body>
 </html>
-
